@@ -1,0 +1,81 @@
+{
+  "id": "css-015",
+  "title": "Dessiner des bordures et des ombres",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Affiche des contours, des coins arrondis et des ombres maîtrisées.",
+  "duration": 9,
+  "xp": 80,
+  "objectives": [
+    "Définir le style d’une bordure",
+    "Arrondir les coins",
+    "Ajouter une ombre lisible"
+  ],
+  "prerequisites": [
+    "css-005",
+    "css-003"
+  ],
+  "tags": [
+    "border",
+    "shadow",
+    "cartes"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p><code>border</code> est un raccourci pour définir l’épaisseur, le style et la couleur d’une bordure. <code>border-radius</code> arrondit les coins. <code>box-shadow</code> crée une ombre autour de la boîte.</p><p>Les ombres doivent rester suffisamment discrètes et ne pas être le seul moyen de distinguer des éléments. Une bordure peut aussi améliorer la délimitation sur des arrière-plans proches.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Dessiner des bordures et des ombres",
+      "html": "<article class=\"carte\"><h2>Découvrir</h2><p>Un cours accessible.</p></article>",
+      "css": ".carte {\n  border: 1px solid #ddd;\n  border-radius: 12px;\n  padding: 1.5rem;\n  box-shadow: 0 4px 14px rgb(0 0 0 / 10%);\n}",
+      "js": "",
+      "explanation": "La carte reçoit un contour fin, des coins arrondis et une ombre légère. Le padding sépare le texte de la bordure."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Arrondis les coins de la carte avec une valeur de 8px.",
+      "initialCode": ".carte {\n  border: 1px solid #ccc;\n  \n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".carte",
+            "property": "border-radius",
+            "value": "8px"
+          }
+        ]
+      },
+      "hints": [
+        "La propriété est border-radius.",
+        "Une valeur en pixels règle le rayon.",
+        "Ajoute la déclaration dans .carte."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle propriété arrondit les coins d’un élément ?",
+      "answers": [
+        "box-shadow",
+        "border-radius",
+        "outline",
+        "opacity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "border-radius règle le rayon de courbure des coins de la boîte."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "border définit un contour.",
+        "border-radius arrondit les coins.",
+        "box-shadow crée une ombre portée."
+      ]
+    }
+  ]
+}

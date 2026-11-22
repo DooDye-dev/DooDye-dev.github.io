@@ -1,0 +1,82 @@
+{
+  "id": "html-006",
+  "title": "Créer des listes ordonnées et non ordonnées",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Présente des éléments sous forme de listes adaptées à leur relation.",
+  "duration": 7,
+  "xp": 70,
+  "objectives": [
+    "Choisir ul ou ol",
+    "Créer des éléments li",
+    "Imbriquer des listes de façon logique"
+  ],
+  "prerequisites": [
+    "html-002"
+  ],
+  "tags": [
+    "listes",
+    "contenu",
+    "structure"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p><code>&lt;ul&gt;</code> représente une liste dont l’ordre n’est pas essentiel. <code>&lt;ol&gt;</code> représente une séquence ou un classement dont l’ordre compte. Chaque entrée est un élément <code>&lt;li&gt;</code>.</p><p>Une liste facilite la lecture d’étapes, d’ingrédients ou de points associés. Ne simule pas une liste avec des tirets tapés dans un paragraphe.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Créer des listes ordonnées et non ordonnées",
+      "html": "<h2>Préparer une recette</h2>\n<ol>\n  <li>Laver les légumes.</li>\n  <li>Couper les ingrédients.</li>\n  <li>Faire cuire doucement.</li>\n</ol>\n<h2>À prévoir</h2>\n<ul>\n  <li>Une casserole</li>\n  <li>Une planche</li>\n</ul>",
+      "css": "",
+      "js": "",
+      "explanation": "ol convient aux étapes à suivre dans l’ordre. ul convient à une liste de matériel sans ordre particulier."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute « Poire » et « Banane » comme deux éléments séparés de la liste.",
+      "initialCode": "<ul>\n  <li>Pomme</li>\n</ul>",
+      "expectedResult": {
+        "tags": [
+          "ul",
+          "li"
+        ],
+        "text": [
+          "Pomme",
+          "Poire",
+          "Banane"
+        ]
+      },
+      "hints": [
+        "Chaque entrée doit être dans son propre <li>.",
+        "Les éléments li restent à l’intérieur de ul.",
+        "Ne crée pas une deuxième liste pour chaque fruit."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quel élément représente une liste dont l’ordre est important ?",
+      "answers": [
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<dl>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "ol représente une liste ordonnée, par exemple des étapes à effectuer dans une séquence."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "ul représente une liste non ordonnée.",
+        "ol représente une liste ordonnée.",
+        "li représente chaque entrée de liste."
+      ]
+    }
+  ]
+}

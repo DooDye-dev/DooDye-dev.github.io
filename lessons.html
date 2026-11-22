@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçons - WebCraft</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/lessons.css">
+    <link rel="stylesheet" href="css/themes/light.css" id="theme-stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">WebCraft</span>
+            </a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="lessons.html" class="nav-link active">Leçons</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="dashboard.html" class="nav-link">Tableau de bord</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-icon theme-toggle" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="lessons">
+            <div class="container">
+                <header class="lessons-header">
+                    <h1 class="page-title">Catalogue des leçons</h1>
+                    <p class="page-subtitle">Choisis une leçon pour commencer à apprendre</p>
+                </header>
+
+                <nav class="course-nav">
+                    <h2 class="nav-title">Modules</h2>
+                    <ul class="course-nav-list">
+                        <li><button class="course-nav-link active" data-course-id="all">Tous</button></li>
+                        <li><button class="course-nav-link" data-course-id="html-basics">HTML - Les bases</button></li>
+                        <li><button class="course-nav-link" data-course-id="html-advanced">HTML - Avancé</button></li>
+                        <li><button class="course-nav-link" data-course-id="css-basics">CSS - Les bases</button></li>
+                        <li><button class="course-nav-link" data-course-id="css-advanced">CSS - Avancé</button></li>
+                        <li><button class="course-nav-link" data-course-id="projects">Projets</button></li>
+                    </ul>
+                </nav>
+
+                <div class="lessons-grid" id="lessons-grid">
+                    <!-- Les leçons seront chargées dynamiquement par JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>WebCraft © 2024 - Une plateforme éducative</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/data/loader.js"></script>
+    <script src="js/models/UserProgress.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const coursesData = loader.loadCourses();
+            const userProgress = new UserProgress();
+            // Initialisation du catalogue des leçons
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "id": "html-009",
+  "title": "Créer un formulaire HTML",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Découvre form, les champs de saisie et l’envoi d’informations.",
+  "duration": 10,
+  "xp": 90,
+  "objectives": [
+    "Créer un formulaire avec form",
+    "Choisir une méthode GET ou POST",
+    "Comprendre le rôle de name"
+  ],
+  "prerequisites": [
+    "html-001"
+  ],
+  "tags": [
+    "formulaires",
+    "form",
+    "données"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>L’élément <code>&lt;form&gt;</code> regroupe des champs destinés à transmettre des données. L’attribut <code>action</code> indique la destination et <code>method</code> choisit la méthode HTTP.</p><p>GET ajoute généralement les données à l’URL et convient à une recherche ou un filtre. POST transmet les données dans le corps de la requête. Chaque champ envoyé doit posséder un attribut <code>name</code>.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Créer un formulaire HTML",
+      "html": "<form action=\"/recherche\" method=\"get\">\n  <label for=\"terme\">Rechercher</label>\n  <input id=\"terme\" name=\"q\" type=\"search\">\n  <button type=\"submit\">Chercher</button>\n</form>",
+      "css": "",
+      "js": "",
+      "explanation": "Le formulaire envoie le champ nommé q vers /recherche avec la méthode GET. Le label donne un nom visible au champ."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Configure la méthode POST pour le formulaire de contact.",
+      "initialCode": "<form action=\"/contact\" method=\"\">\n  <button type=\"submit\">Envoyer</button>\n</form>",
+      "expectedResult": {
+        "tags": [
+          "form"
+        ],
+        "attributes": {
+          "method": "post",
+          "action": "/contact"
+        }
+      },
+      "hints": [
+        "L’attribut method est porté par form.",
+        "La valeur attendue ici est post.",
+        "Ne modifie pas l’action /contact."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quel attribut indique le nom transmis pour un champ de formulaire ?",
+      "answers": [
+        "id",
+        "name",
+        "class",
+        "for"
+      ],
+      "correctAnswer": 1,
+      "explanation": "name est utilisé comme clé lors de la soumission du formulaire. id sert notamment à associer un label."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "form regroupe les champs à envoyer.",
+        "action indique la destination.",
+        "method choisit GET ou POST.",
+        "name donne la clé transmise pour un champ."
+      ]
+    }
+  ]
+}

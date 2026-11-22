@@ -1,0 +1,81 @@
+{
+  "id": "html-012",
+  "title": "Intégrer de l’audio et de la vidéo",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Ajoute des médias avec leurs contrôles et des solutions de repli.",
+  "duration": 11,
+  "xp": 95,
+  "objectives": [
+    "Utiliser audio et video",
+    "Ajouter controls et des sources",
+    "Prévoir des sous-titres vidéo"
+  ],
+  "prerequisites": [
+    "html-005"
+  ],
+  "tags": [
+    "audio",
+    "vidéo",
+    "médias"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les éléments <code>&lt;audio&gt;</code> et <code>&lt;video&gt;</code> permettent d’intégrer des médias sans plugin externe. L’attribut <code>controls</code> affiche les commandes natives du navigateur.</p><p>Utilise un ou plusieurs éléments <code>&lt;source&gt;</code> pour proposer différents formats. Pour une vidéo avec dialogue, ajoute des sous-titres avec <code>&lt;track kind=&quot;captions&quot;&gt;</code>.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Intégrer de l’audio et de la vidéo",
+      "html": "<video controls width=\"640\" poster=\"images/apercu.jpg\">\n  <source src=\"videos/demo.mp4\" type=\"video/mp4\">\n  <track src=\"captions/demo-fr.vtt\" kind=\"captions\" srclang=\"fr\" label=\"Français\">\n  Votre navigateur ne prend pas en charge cette vidéo.\n</video>",
+      "css": "",
+      "js": "",
+      "explanation": "controls fournit les commandes, poster affiche une image avant lecture et track associe un fichier de sous-titres WebVTT."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute les contrôles du navigateur au lecteur audio.",
+      "initialCode": "<audio src=\"audio/podcast.mp3\"></audio>",
+      "expectedResult": {
+        "tags": [
+          "audio"
+        ],
+        "attributes": {
+          "src": "audio/podcast.mp3",
+          "controls": true
+        }
+      },
+      "hints": [
+        "controls est un attribut booléen.",
+        "Ajoute-le directement dans la balise audio.",
+        "Il permet à l’utilisateur de lancer et de mettre en pause la lecture."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quel attribut affiche les commandes natives d’un média ?",
+      "answers": [
+        "autoplay",
+        "controls",
+        "poster",
+        "muted"
+      ],
+      "correctAnswer": 1,
+      "explanation": "controls demande au navigateur d’afficher les commandes de lecture, de pause et de volume."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "audio et video intègrent des médias.",
+        "controls rend la lecture contrôlable.",
+        "source propose des formats alternatifs.",
+        "track peut fournir des sous-titres."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "html-007",
+  "title": "Présenter des données avec un tableau",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Construit un tableau accessible pour des données tabulaires.",
+  "duration": 10,
+  "xp": 85,
+  "objectives": [
+    "Créer table, tr, th et td",
+    "Associer des en-têtes aux colonnes",
+    "Éviter les tableaux pour la mise en page"
+  ],
+  "prerequisites": [
+    "html-006"
+  ],
+  "tags": [
+    "tableaux",
+    "données",
+    "accessibilité"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Un tableau HTML sert à présenter des données qui se comprennent en lignes et colonnes. <code>&lt;tr&gt;</code> crée une ligne, <code>&lt;th&gt;</code> une cellule d’en-tête et <code>&lt;td&gt;</code> une cellule de données.</p><p>Utilise <code>&lt;thead&gt;</code> pour les en-têtes et <code>&lt;tbody&gt;</code> pour les données. L’attribut <code>scope</code> aide à préciser si un en-tête concerne une colonne ou une ligne.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Présenter des données avec un tableau",
+      "html": "<table>\n  <caption>Horaires des ateliers</caption>\n  <thead>\n    <tr><th scope=\"col\">Atelier</th><th scope=\"col\">Heure</th></tr>\n  </thead>\n  <tbody>\n    <tr><th scope=\"row\">HTML</th><td>9 h</td></tr>\n    <tr><th scope=\"row\">CSS</th><td>11 h</td></tr>\n  </tbody>\n</table>",
+      "css": "",
+      "js": "",
+      "explanation": "caption donne un titre au tableau. Les cellules d’en-tête utilisent th et les valeurs simples utilisent td."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Transforme la première ligne en en-têtes de colonnes en remplaçant les cellules par des th et en ajoutant scope=\"col\".",
+      "initialCode": "<table>\n  <tr>\n    <td>Nom</td>\n    <td>Score</td>\n  </tr>\n</table>",
+      "expectedResult": {
+        "tags": [
+          "table",
+          "tr",
+          "th"
+        ],
+        "attributes": {
+          "scope": "col"
+        }
+      },
+      "hints": [
+        "Les cellules d’en-tête utilisent <th>.",
+        "scope=\"col\" précise que l’en-tête concerne une colonne.",
+        "Les futures valeurs du tableau resteront des <td>."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle balise représente une cellule d’en-tête ?",
+      "answers": [
+        "<td>",
+        "<tr>",
+        "<th>",
+        "<caption>"
+      ],
+      "correctAnswer": 2,
+      "explanation": "th identifie une cellule d’en-tête. Elle permet de donner du contexte aux cellules de données."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "table représente le tableau.",
+        "tr représente une ligne.",
+        "th représente un en-tête et td une donnée.",
+        "Les tableaux sont faits pour les données, pas pour la mise en page."
+      ]
+    }
+  ]
+}

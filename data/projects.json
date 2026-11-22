@@ -1,0 +1,360 @@
+{
+  "metadata": {
+    "title": "WebCraft - Projets",
+    "description": "Liste des projets disponibles pour mettre en pratique les connaissances acquises",
+    "version": "1.0.0",
+    "author": "WebCraft Team",
+    "language": "fr"
+  },
+  "projects": [
+    {
+      "id": "project-001",
+      "title": "Site vitrine pour un restaurant",
+      "description": "Crée un site vitrine complet pour un restaurant avec plusieurs pages : accueil, menu, à propos, contact.",
+      "category": "full",
+      "level": "Intermédiaire",
+      "estimatedDuration": 60,
+      "difficulty": 3,
+      "prerequisites": ["css-016"],
+      "tags": ["HTML", "CSS", "responsive", "multi-page"],
+      "file": "projects/project-001.json",
+      "icon": "🍽️",
+      "color": "#10B981",
+      "objectives": [
+        "Créer une structure HTML sémantique pour chaque page",
+        "Styliser le site avec CSS pour un design moderne",
+        "Rendre le site responsive pour mobile et tablette",
+        "Utiliser Flexbox ou CSS Grid pour les layouts",
+        "Créer un menu de navigation cohérent"
+      ],
+      "pages": [
+        {
+          "name": "Accueil",
+          "description": "Page d'accueil avec banner, présentation, sections mise en avant"
+        },
+        {
+          "name": "Menu",
+          "description": "Page du menu avec catégories, plats, prix"
+        },
+        {
+          "name": "À propos",
+          "description": "Page à propos avec histoire, équipe, valeurs"
+        },
+        {
+          "name": "Contact",
+          "description": "Page de contact avec formulaire, adresse, carte"
+        }
+      ],
+      "assets": [
+        "images/restaurant-logo.png",
+        "images/food-1.jpg",
+        "images/food-2.jpg",
+        "images/food-3.jpg"
+      ],
+      "xpReward": 200,
+      "badgeReward": "restaurant-master"
+    },
+    {
+      "id": "project-002",
+      "title": "Blog personnel avec articles",
+      "description": "Crée un blog personnel avec une page d'accueil affichant les articles et une page pour chaque article.",
+      "category": "full",
+      "level": "Intermédiaire",
+      "estimatedDuration": 60,
+      "difficulty": 3,
+      "prerequisites": ["css-016"],
+      "tags": ["HTML", "CSS", "blog", "articles"],
+      "file": "projects/project-002.json",
+      "icon": "✍️",
+      "color": "#8B5CF6",
+      "objectives": [
+        "Créer une structure de blog avec articles",
+        "Styliser les cartes d'articles",
+        "Créer une page unique pour chaque article",
+        "Utiliser des layouts en grille pour les articles",
+        "Ajouter une sidebar avec catégories et recherche"
+      ],
+      "pages": [
+        {
+          "name": "Accueil",
+          "description": "Page d'accueil avec liste des articles"
+        },
+        {
+          "name": "Article",
+          "description": "Page unique pour chaque article"
+        },
+        {
+          "name": "À propos",
+          "description": "Page à propos de l'auteur"
+        }
+      ],
+      "assets": [
+        "images/blog-hero.jpg",
+        "images/article-1.jpg",
+        "images/article-2.jpg",
+        "images/author.jpg"
+      ],
+      "xpReward": 200,
+      "badgeReward": "blogger"
+    },
+    {
+      "id": "project-003",
+      "title": "Portfolio professionnel",
+      "description": "Crée un portfolio professionnel pour mettre en valeur tes compétences et projets.",
+      "category": "full",
+      "level": "Intermédiaire",
+      "estimatedDuration": 60,
+      "difficulty": 4,
+      "prerequisites": ["css-016"],
+      "tags": ["HTML", "CSS", "portfolio", "responsive", "modern"],
+      "file": "projects/project-003.json",
+      "icon": "📂",
+      "color": "#3B82F6",
+      "objectives": [
+        "Créer une page unique avec toutes les sections",
+        "Utiliser des animations CSS pour les effets",
+        "Créer une section héro avec appel à l'action",
+        "Afficher les projets sous forme de grille",
+        "Ajouter un formulaire de contact",
+        "Rendre le portfolio complètement responsive"
+      ],
+      "pages": [
+        {
+          "name": "Portfolio",
+          "description": "Page unique avec toutes les sections"
+        }
+      ],
+      "sections": [
+        "Hero",
+        "À propos",
+        "Compétences",
+        "Projets",
+        "Témoignages",
+        "Contact"
+      ],
+      "assets": [
+        "images/portfolio-hero.jpg",
+        "images/project-1.jpg",
+        "images/project-2.jpg",
+        "images/project-3.jpg",
+        "images/avatar.jpg"
+      ],
+      "xpReward": 250,
+      "badgeReward": "portfolio-master"
+    },
+    {
+      "id": "project-004",
+      "title": "Page de destination (Landing Page)",
+      "description": "Crée une page de destination moderne pour promouvoir un produit ou service.",
+      "category": "single",
+      "level": "Intermédiaire",
+      "estimatedDuration": 45,
+      "difficulty": 3,
+      "prerequisites": ["css-014"],
+      "tags": ["HTML", "CSS", "landing-page", "responsive", "modern"],
+      "file": "projects/project-004.json",
+      "icon": "🚀",
+      "color": "#F97316",
+      "objectives": [
+        "Créer une page unique avec appel à l'action",
+        "Utiliser des sections avec fond coloré",
+        "Ajouter des boutons avec effets au survol",
+        "Créer un formulaire d'inscription",
+        "Rendre la page responsive"
+      ],
+      "sections": [
+        "Hero avec CTA",
+        "Fonctionnalités",
+        "Avantages",
+        "Témoignages",
+        "Formulaire d'inscription",
+        "Footer"
+      ],
+      "xpReward": 150,
+      "badgeReward": "landing-page-expert"
+    },
+    {
+      "id": "project-005",
+      "title": "Galerie d'images",
+      "description": "Crée une galerie d'images responsive avec effets de survol.",
+      "category": "single",
+      "level": "Débutant",
+      "estimatedDuration": 30,
+      "difficulty": 2,
+      "prerequisites": ["css-007"],
+      "tags": ["HTML", "CSS", "gallery", "responsive", "grid"],
+      "file": "projects/project-005.json",
+      "icon": "🖼️",
+      "color": "#EC4899",
+      "objectives": [
+        "Créer une grille d'images",
+        "Utiliser CSS Grid ou Flexbox",
+        "Ajouter des effets de survol",
+        "Rendre la galerie responsive",
+        "Ajouter des légendes aux images"
+      ],
+      "assets": [
+        "images/gallery-1.jpg",
+        "images/gallery-2.jpg",
+        "images/gallery-3.jpg",
+        "images/gallery-4.jpg",
+        "images/gallery-5.jpg",
+        "images/gallery-6.jpg"
+      ],
+      "xpReward": 100,
+      "badgeReward": "gallery-creator"
+    },
+    {
+      "id": "project-006",
+      "title": "Formulaire de contact avancé",
+      "description": "Crée un formulaire de contact moderne avec validation visuelle.",
+      "category": "single",
+      "level": "Intermédiaire",
+      "estimatedDuration": 40,
+      "difficulty": 3,
+      "prerequisites": ["html-009"],
+      "tags": ["HTML", "CSS", "form", "validation", "modern"],
+      "file": "projects/project-006.json",
+      "icon": "📧",
+      "color": "#10B981",
+      "objectives": [
+        "Créer un formulaire avec tous les champs nécessaires",
+        "Styliser le formulaire avec CSS",
+        "Ajouter des effets de focus",
+        "Créer des boutons radio et cases à cocher",
+        "Ajouter une validation visuelle"
+      ],
+      "xpReward": 120,
+      "badgeReward": "form-expert"
+    },
+    {
+      "id": "project-007",
+      "title": "Card UI Component",
+      "description": "Crée différents types de cartes (produit, profil, article) avec CSS.",
+      "category": "component",
+      "level": "Débutant",
+      "estimatedDuration": 25,
+      "difficulty": 2,
+      "prerequisites": ["css-007"],
+      "tags": ["HTML", "CSS", "components", "cards", "UI"],
+      "file": "projects/project-007.json",
+      "icon": "📊",
+      "color": "#8B5CF6",
+      "objectives": [
+        "Créer une carte de produit",
+        "Créer une carte de profil",
+        "Créer une carte d'article",
+        "Ajouter des ombres et effets de survol",
+        "Rendre les cartes responsive"
+      ],
+      "xpReward": 80,
+      "badgeReward": "ui-designer"
+    },
+    {
+      "id": "project-008",
+      "title": "Barre de navigation responsive",
+      "description": "Crée une barre de navigation qui s'adapte à toutes les tailles d'écran.",
+      "category": "component",
+      "level": "Intermédiaire",
+      "estimatedDuration": 35,
+      "difficulty": 3,
+      "prerequisites": ["css-014"],
+      "tags": ["HTML", "CSS", "navigation", "responsive", "mobile"],
+      "file": "projects/project-008.json",
+      "icon": "🧭",
+      "color": "#3B82F6",
+      "objectives": [
+        "Créer une barre de navigation horizontale",
+        "Ajouter un menu hamburger pour mobile",
+        "Utiliser des media queries",
+        "Ajouter des effets de survol",
+        "Rendre la navigation accessible"
+      ],
+      "xpReward": 120,
+      "badgeReward": "navigation-expert"
+    },
+    {
+      "id": "project-009",
+      "title": "Page 404 personnalisée",
+      "description": "Crée une page 404 créative et utile pour ton site.",
+      "category": "single",
+      "level": "Débutant",
+      "estimatedDuration": 20,
+      "difficulty": 1,
+      "prerequisites": ["html-007"],
+      "tags": ["HTML", "CSS", "404", "error-page", "creative"],
+      "file": "projects/project-009.json",
+      "icon": "❌",
+      "color": "#EF4444",
+      "objectives": [
+        "Créer une page avec message d'erreur",
+        "Ajouter une illustration ou animation",
+        "Inclure un lien vers la page d'accueil",
+        "Styliser la page pour qu'elle soit cohérente avec le site",
+        "Ajouter une recherche ou suggestions"
+      ],
+      "xpReward": 60,
+      "badgeReward": "error-page-designer"
+    },
+    {
+      "id": "project-010",
+      "title": "FAQ Accordion",
+      "description": "Crée une section FAQ avec des questions qui s'ouvrent et se ferment.",
+      "category": "component",
+      "level": "Intermédiaire",
+      "estimatedDuration": 40,
+      "difficulty": 3,
+      "prerequisites": ["css-011"],
+      "tags": ["HTML", "CSS", "JavaScript", "accordion", "FAQ"],
+      "file": "projects/project-010.json",
+      "icon": "❓",
+      "color": "#F97316",
+      "objectives": [
+        "Créer une liste de questions",
+        "Styliser les questions et réponses",
+        "Ajouter du JavaScript pour l'interactivité",
+        "Créer des animations d'ouverture/fermeture",
+        "Rendre l'accordion accessible"
+      ],
+      "xpReward": 150,
+      "badgeReward": "interaction-expert"
+    }
+  ],
+  "categories": [
+    {
+      "id": "full",
+      "title": "Sites complets",
+      "description": "Projets impliquant plusieurs pages et fonctionnalités complètes"
+    },
+    {
+      "id": "single",
+      "title": "Pages uniques",
+      "description": "Projets sur une seule page"
+    },
+    {
+      "id": "component",
+      "title": "Composants UI",
+      "description": "Projets axés sur des éléments d'interface spécifiques"
+    }
+  ],
+  "difficultyLevels": [
+    {
+      "id": "beginner",
+      "title": "Débutant",
+      "description": "Projets simples pour commencer",
+      "minXP": 0
+    },
+    {
+      "id": "intermediate",
+      "title": "Intermédiaire",
+      "description": "Projets nécessitant une bonne compréhension",
+      "minXP": 500
+    },
+    {
+      "id": "advanced",
+      "title": "Avancé",
+      "description": "Projets complexes pour les experts",
+      "minXP": 1500
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "html-002",
+  "title": "Organiser les titres et paragraphes",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Structure un texte avec des titres hiérarchisés et des paragraphes lisibles.",
+  "duration": 7,
+  "xp": 70,
+  "objectives": [
+    "Choisir un niveau de titre adapté",
+    "Structurer un texte en paragraphes",
+    "Éviter les titres choisis uniquement pour leur apparence"
+  ],
+  "prerequisites": [
+    "html-001"
+  ],
+  "tags": [
+    "titres",
+    "paragraphes",
+    "texte"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les éléments <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code> représentent six niveaux de titres. Ils décrivent la hiérarchie du document, pas une taille de police à choisir visuellement.</p><p>Utilise <code>&lt;p&gt;</code> pour chaque paragraphe. En règle générale, une page possède un titre principal clair, puis des sous-titres qui organisent les sections dans un ordre logique.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Organiser les titres et paragraphes",
+      "html": "<main>\n  <h1>Le jardin urbain</h1>\n  <p>Un petit espace peut devenir un lieu de culture.</p>\n  <h2>Choisir les plantes</h2>\n  <p>Commence par des espèces adaptées à la lumière disponible.</p>\n  <h3>Les aromatiques</h3>\n  <p>Le basilic et la ciboulette poussent facilement en pot.</p>\n</main>",
+      "css": "",
+      "js": "",
+      "explanation": "Les niveaux h1, h2 et h3 rendent la hiérarchie compréhensible. Les paragraphes séparent les idées sans utiliser de retours à la ligne artificiels."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute un sous-titre « Les premières étapes » puis un paragraphe « Je prépare mon itinéraire. » après le titre principal.",
+      "initialCode": "<main>\n  <h1>Mon voyage</h1>\n  \n  \n  <p>Je découvre une nouvelle ville.</p>\n</main>",
+      "expectedResult": {
+        "tags": [
+          "h1",
+          "h2",
+          "p"
+        ],
+        "text": [
+          "Mon voyage",
+          "Les premières étapes",
+          "Je prépare mon itinéraire."
+        ]
+      },
+      "hints": [
+        "Un sous-titre de premier niveau sous h1 utilise généralement h2.",
+        "Place le nouveau paragraphe après le sous-titre.",
+        "Conserve le paragraphe déjà présent si tu le souhaites."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle balise convient pour un sous-titre directement rattaché au titre principal ?",
+      "answers": [
+        "<h1>",
+        "<h2>",
+        "<p>",
+        "<strong>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "h2 représente un sous-titre de niveau inférieur à h1. Le choix suit la hiérarchie logique du contenu."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "h1 à h6 expriment une hiérarchie de titres.",
+        "p représente un paragraphe.",
+        "Les titres ne doivent pas être choisis uniquement pour leur taille."
+      ]
+    }
+  ]
+}

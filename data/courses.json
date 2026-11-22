@@ -1,0 +1,444 @@
+{
+  "name": "WebCraft — Parcours HTML et CSS",
+  "version": 1,
+  "description": "36 leçons progressives pour apprendre les bases de HTML et CSS.",
+  "modules": [
+    {
+      "id": "html-module-01",
+      "title": "Fondations HTML",
+      "category": "html",
+      "track": "html",
+      "lessons": [
+        {
+          "id": "html-001",
+          "title": "Découvrir un document HTML",
+          "file": "html/module-01/lesson-001.json",
+          "duration": 8,
+          "difficulty": 1,
+          "prerequisites": []
+        },
+        {
+          "id": "html-002",
+          "title": "Organiser les titres et paragraphes",
+          "file": "html/module-01/lesson-002.json",
+          "duration": 7,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-001"
+          ]
+        },
+        {
+          "id": "html-003",
+          "title": "Mettre en valeur le texte",
+          "file": "html/module-01/lesson-003.json",
+          "duration": 8,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-002"
+          ]
+        },
+        {
+          "id": "html-004",
+          "title": "Créer des liens hypertextes",
+          "file": "html/module-01/lesson-004.json",
+          "duration": 8,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-001"
+          ]
+        },
+        {
+          "id": "html-005",
+          "title": "Afficher des images accessibles",
+          "file": "html/module-01/lesson-005.json",
+          "duration": 9,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-001"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-module-02",
+      "title": "Contenus et navigation",
+      "category": "html",
+      "track": "html",
+      "lessons": [
+        {
+          "id": "html-006",
+          "title": "Créer des listes ordonnées et non ordonnées",
+          "file": "html/module-02/lesson-001.json",
+          "duration": 7,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-002"
+          ]
+        },
+        {
+          "id": "html-007",
+          "title": "Présenter des données avec un tableau",
+          "file": "html/module-02/lesson-002.json",
+          "duration": 10,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-006"
+          ]
+        },
+        {
+          "id": "html-008",
+          "title": "Structurer une page avec les éléments sémantiques",
+          "file": "html/module-02/lesson-003.json",
+          "duration": 12,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-002",
+            "html-004"
+          ]
+        },
+        {
+          "id": "html-009",
+          "title": "Créer un formulaire HTML",
+          "file": "html/module-02/lesson-004.json",
+          "duration": 10,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-001"
+          ]
+        },
+        {
+          "id": "html-010",
+          "title": "Associer labels et champs de saisie",
+          "file": "html/module-02/lesson-005.json",
+          "duration": 9,
+          "difficulty": 1,
+          "prerequisites": [
+            "html-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-module-03",
+      "title": "Formulaires et médias",
+      "category": "html",
+      "track": "html",
+      "lessons": [
+        {
+          "id": "html-011",
+          "title": "Valider les champs avec HTML",
+          "file": "html/module-03/lesson-001.json",
+          "duration": 10,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-010"
+          ]
+        },
+        {
+          "id": "html-012",
+          "title": "Intégrer de l’audio et de la vidéo",
+          "file": "html/module-03/lesson-002.json",
+          "duration": 11,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-005"
+          ]
+        },
+        {
+          "id": "html-013",
+          "title": "Ajouter les métadonnées essentielles",
+          "file": "html/module-03/lesson-003.json",
+          "duration": 8,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-001"
+          ]
+        },
+        {
+          "id": "html-014",
+          "title": "Appliquer les bases de l’accessibilité HTML",
+          "file": "html/module-03/lesson-004.json",
+          "duration": 12,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-005",
+            "html-008",
+            "html-010"
+          ]
+        },
+        {
+          "id": "html-015",
+          "title": "Créer des contenus dépliables",
+          "file": "html/module-03/lesson-005.json",
+          "duration": 7,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-module-04",
+      "title": "Sémantique et accessibilité",
+      "category": "html",
+      "track": "html",
+      "lessons": [
+        {
+          "id": "html-016",
+          "title": "Légender une image avec figure",
+          "file": "html/module-04/lesson-001.json",
+          "duration": 8,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-005"
+          ]
+        },
+        {
+          "id": "html-017",
+          "title": "Intégrer une page externe avec iframe",
+          "file": "html/module-04/lesson-002.json",
+          "duration": 12,
+          "difficulty": 3,
+          "prerequisites": [
+            "html-004",
+            "html-014"
+          ]
+        },
+        {
+          "id": "html-018",
+          "title": "Assembler une page de présentation",
+          "file": "html/module-04/lesson-003.json",
+          "duration": 18,
+          "difficulty": 2,
+          "prerequisites": [
+            "html-008",
+            "html-011",
+            "html-014",
+            "html-015"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-module-01",
+      "title": "Fondations CSS",
+      "category": "css",
+      "track": "css",
+      "lessons": [
+        {
+          "id": "css-001",
+          "title": "Écrire une règle CSS",
+          "file": "css/module-01/lesson-001.json",
+          "duration": 8,
+          "difficulty": 1,
+          "prerequisites": []
+        },
+        {
+          "id": "css-002",
+          "title": "Cibler des éléments avec les sélecteurs",
+          "file": "css/module-01/lesson-002.json",
+          "duration": 9,
+          "difficulty": 1,
+          "prerequisites": [
+            "css-001"
+          ]
+        },
+        {
+          "id": "css-003",
+          "title": "Comprendre la cascade et la spécificité",
+          "file": "css/module-01/lesson-003.json",
+          "duration": 12,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-002"
+          ]
+        },
+        {
+          "id": "css-004",
+          "title": "Choisir des couleurs et des transparences",
+          "file": "css/module-01/lesson-004.json",
+          "duration": 8,
+          "difficulty": 1,
+          "prerequisites": [
+            "css-001"
+          ]
+        },
+        {
+          "id": "css-005",
+          "title": "Mettre en forme la typographie",
+          "file": "css/module-01/lesson-005.json",
+          "duration": 9,
+          "difficulty": 1,
+          "prerequisites": [
+            "css-001"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-module-02",
+      "title": "Boîtes et positionnement",
+      "category": "css",
+      "track": "css",
+      "lessons": [
+        {
+          "id": "css-006",
+          "title": "Comprendre le modèle de boîte",
+          "file": "css/module-02/lesson-001.json",
+          "duration": 10,
+          "difficulty": 1,
+          "prerequisites": [
+            "css-001"
+          ]
+        },
+        {
+          "id": "css-007",
+          "title": "Utiliser les unités et les fonctions de taille",
+          "file": "css/module-02/lesson-002.json",
+          "duration": 11,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-005"
+          ]
+        },
+        {
+          "id": "css-008",
+          "title": "Comprendre display et le flux normal",
+          "file": "css/module-02/lesson-003.json",
+          "duration": 9,
+          "difficulty": 1,
+          "prerequisites": [
+            "css-005"
+          ]
+        },
+        {
+          "id": "css-009",
+          "title": "Positionner les éléments",
+          "file": "css/module-02/lesson-004.json",
+          "duration": 12,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-007"
+          ]
+        },
+        {
+          "id": "css-010",
+          "title": "Créer une mise en page avec Flexbox",
+          "file": "css/module-02/lesson-005.json",
+          "duration": 12,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-007",
+            "css-008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-module-03",
+      "title": "Mise en page moderne",
+      "category": "css",
+      "track": "css",
+      "lessons": [
+        {
+          "id": "css-011",
+          "title": "Construire une grille avec CSS Grid",
+          "file": "css/module-03/lesson-001.json",
+          "duration": 13,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-007",
+            "css-008"
+          ]
+        },
+        {
+          "id": "css-012",
+          "title": "Adapter une page avec les media queries",
+          "file": "css/module-03/lesson-002.json",
+          "duration": 12,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-006",
+            "css-009",
+            "css-010"
+          ]
+        },
+        {
+          "id": "css-013",
+          "title": "Styliser les états avec les pseudo-classes",
+          "file": "css/module-03/lesson-003.json",
+          "duration": 9,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-002",
+            "css-007"
+          ]
+        },
+        {
+          "id": "css-014",
+          "title": "Créer des arrière-plans",
+          "file": "css/module-03/lesson-004.json",
+          "duration": 10,
+          "difficulty": 1,
+          "prerequisites": [
+            "css-003"
+          ]
+        },
+        {
+          "id": "css-015",
+          "title": "Dessiner des bordures et des ombres",
+          "file": "css/module-03/lesson-005.json",
+          "duration": 9,
+          "difficulty": 1,
+          "prerequisites": [
+            "css-005",
+            "css-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-module-04",
+      "title": "Responsive et finitions",
+      "category": "css",
+      "track": "css",
+      "lessons": [
+        {
+          "id": "css-016",
+          "title": "Animer les changements avec transitions et transforms",
+          "file": "css/module-04/lesson-001.json",
+          "duration": 12,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-012"
+          ]
+        },
+        {
+          "id": "css-017",
+          "title": "Créer des variables CSS",
+          "file": "css/module-04/lesson-002.json",
+          "duration": 10,
+          "difficulty": 2,
+          "prerequisites": [
+            "css-003",
+            "css-005"
+          ]
+        },
+        {
+          "id": "css-018",
+          "title": "Réaliser une interface responsive",
+          "file": "css/module-04/lesson-003.json",
+          "duration": 18,
+          "difficulty": 3,
+          "prerequisites": [
+            "css-009",
+            "css-010",
+            "css-011",
+            "css-016"
+          ]
+        }
+      ]
+    }
+  ]
+}

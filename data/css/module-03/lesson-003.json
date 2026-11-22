@@ -1,0 +1,82 @@
+{
+  "id": "css-013",
+  "title": "Styliser les états avec les pseudo-classes",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Cible les états interactifs et certaines positions dans une collection.",
+  "duration": 9,
+  "xp": 90,
+  "objectives": [
+    "Utiliser :hover et :focus-visible",
+    "Cibler first-child et nth-child",
+    "Prévoir un état clavier visible"
+  ],
+  "prerequisites": [
+    "css-002",
+    "css-007"
+  ],
+  "tags": [
+    "pseudo-classes",
+    "états",
+    "interaction"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Une pseudo-classe cible un état ou une position d’un élément. Par exemple <code>:hover</code> lorsque le pointeur survole un élément, <code>:focus-visible</code> lorsqu’un focus doit être visuellement mis en évidence, et <code>:first-child</code> pour le premier enfant.</p><p>Ne supprime pas l’indicateur de focus sans fournir une alternative très visible. Les utilisateurs au clavier doivent pouvoir identifier l’élément actif.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Styliser les états avec les pseudo-classes",
+      "html": "<a class=\"bouton\" href=\"#inscription\">S’inscrire</a>",
+      "css": ".bouton { background: #174ea6; color: white; padding: .7rem 1rem; }\n.bouton:hover { background: #0d3578; }\n.bouton:focus-visible { outline: 3px solid orange; outline-offset: 3px; }",
+      "js": "",
+      "explanation": "hover modifie le style au survol. focus-visible donne un contour visible lorsque l’utilisateur navigue notamment au clavier."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute une règle :focus-visible pour donner un contour de 2px solide noir au lien.",
+      "initialCode": ".lien:hover { color: red; }",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".lien:focus-visible",
+            "property": "outline",
+            "value": "2px solid black"
+          }
+        ]
+      },
+      "hints": [
+        "La pseudo-classe se colle au sélecteur .lien.",
+        "La propriété outline dessine un contour.",
+        "La valeur demandée est 2px solid black."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle pseudo-classe est particulièrement utile pour rendre le focus clavier visible ?",
+      "answers": [
+        ":visited",
+        ":focus-visible",
+        ":empty",
+        ":root"
+      ],
+      "correctAnswer": 1,
+      "explanation": ":focus-visible permet de styliser l’indicateur de focus visible, particulièrement utile lors d’une navigation au clavier."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        ":hover correspond au survol du pointeur.",
+        ":focus-visible aide à mettre en évidence le focus.",
+        ":first-child et :nth-child ciblent des positions.",
+        "Conserve un indicateur de focus perceptible."
+      ]
+    }
+  ]
+}

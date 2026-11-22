@@ -1,0 +1,81 @@
+{
+  "id": "css-008",
+  "title": "Comprendre display et le flux normal",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Différencie block, inline, inline-block et none.",
+  "duration": 9,
+  "xp": 85,
+  "objectives": [
+    "Décrire le flux normal",
+    "Choisir block ou inline",
+    "Utiliser inline-block et display none"
+  ],
+  "prerequisites": [
+    "css-005"
+  ],
+  "tags": [
+    "display",
+    "flux",
+    "mise-en-page"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Dans le flux normal, un élément block commence généralement sur une nouvelle ligne et occupe la largeur disponible. Un élément inline reste dans le flux d’une ligne et ne se comporte pas comme une boîte de bloc complète.</p><p><code>inline-block</code> combine le placement en ligne avec des dimensions de boîte. <code>display: none</code> retire l’élément de la mise en page et de l’arbre d’accessibilité dans les conditions usuelles.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Comprendre display et le flux normal",
+      "html": "<p>Découvre <a class=\"badge\" href=\"#cours\">les cours</a> disponibles.</p>\n<div class=\"notice\">Inscription ouverte</div>",
+      "css": ".badge { display: inline-block; padding: .25rem .6rem; }\n.notice { display: block; margin-top: 1rem; }",
+      "js": "",
+      "explanation": "Le lien reste dans le flux de texte. inline-block permet de lui donner du padding ; le div demeure un bloc."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Configure l’étiquette en inline-block.",
+      "initialCode": ".etiquette {\n  display: ;\n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".etiquette",
+            "property": "display",
+            "value": "inline-block"
+          }
+        ]
+      },
+      "hints": [
+        "La valeur recherchée combine inline et block.",
+        "La propriété est display.",
+        "Écris inline-block avec un trait d’union."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle valeur permet de garder un élément dans une ligne tout en lui appliquant des dimensions de boîte ?",
+      "answers": [
+        "block",
+        "inline",
+        "inline-block",
+        "none"
+      ],
+      "correctAnswer": 2,
+      "explanation": "inline-block conserve le placement en ligne tout en permettant les dimensions et espacements d’une boîte."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "block commence généralement sur une nouvelle ligne.",
+        "inline suit le flux du texte.",
+        "inline-block combine placement en ligne et boîte dimensionnable.",
+        "none retire l’élément de la mise en page."
+      ]
+    }
+  ]
+}

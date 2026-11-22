@@ -1,0 +1,81 @@
+{
+  "id": "html-016",
+  "title": "Légender une image avec figure",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Associe un média ou un schéma à une légende explicative.",
+  "duration": 8,
+  "xp": 85,
+  "objectives": [
+    "Grouper un contenu autonome avec figure",
+    "Ajouter une légende avec figcaption",
+    "Distinguer alt et légende"
+  ],
+  "prerequisites": [
+    "html-005"
+  ],
+  "tags": [
+    "figure",
+    "figcaption",
+    "images"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p><code>&lt;figure&gt;</code> regroupe un contenu autonome, comme une image, un schéma ou un extrait de code. <code>&lt;figcaption&gt;</code> fournit sa légende.</p><p>La légende apporte un contexte visible à tous les lecteurs. Elle ne remplace pas automatiquement l’alternative <code>alt</code> : ces deux textes n’ont pas forcément le même rôle.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Légender une image avec figure",
+      "html": "<figure>\n  <img src=\"images/schema-dom.png\" alt=\"Schéma simplifié reliant document, html, head et body\">\n  <figcaption>Structure simplifiée d’un document HTML.</figcaption>\n</figure>",
+      "css": "",
+      "js": "",
+      "explanation": "alt décrit l’information de l’image pour les situations où elle n’est pas perceptible. figcaption donne une légende visible associée à la figure."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute une légende « Plan du parc et de ses sentiers » à la figure.",
+      "initialCode": "<figure>\n  <img src=\"images/carte.png\" alt=\"Carte du parc\">\n</figure>",
+      "expectedResult": {
+        "tags": [
+          "figure",
+          "img",
+          "figcaption"
+        ],
+        "text": [
+          "Plan du parc et de ses sentiers"
+        ]
+      },
+      "hints": [
+        "La légende utilise <figcaption>.",
+        "Place figcaption à l’intérieur de figure.",
+        "Conserve le texte alternatif de l’image."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quel élément contient la légende d’une figure ?",
+      "answers": [
+        "<caption>",
+        "<figcaption>",
+        "<summary>",
+        "<label>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "figcaption est la légende associée au contenu regroupé dans figure."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "figure regroupe un contenu autonome.",
+        "figcaption fournit sa légende.",
+        "alt et figcaption répondent à des besoins différents."
+      ]
+    }
+  ]
+}

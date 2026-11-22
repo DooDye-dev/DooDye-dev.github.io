@@ -1,0 +1,85 @@
+{
+  "id": "html-014",
+  "title": "Appliquer les bases de l’accessibilité HTML",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Rends une page plus compréhensible au clavier et avec les technologies d’assistance.",
+  "duration": 12,
+  "xp": 110,
+  "objectives": [
+    "Fournir des alternatives textuelles",
+    "Respecter la hiérarchie des titres",
+    "Créer des liens et contrôles explicites"
+  ],
+  "prerequisites": [
+    "html-005",
+    "html-008",
+    "html-010"
+  ],
+  "tags": [
+    "accessibilité",
+    "wcag",
+    "sémantique"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>L’accessibilité vise à rendre le contenu utilisable par des personnes ayant des capacités et des modes d’accès différents. En HTML, commence par des éléments natifs sémantiques, des labels associés aux champs, des alternatives pertinentes pour les images et une hiérarchie de titres cohérente.</p><p>Les éléments interactifs natifs sont généralement accessibles au clavier. Évite de remplacer un bouton par un <code>&lt;div&gt;</code> cliquable sans gestion clavier et sémantique appropriées.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Appliquer les bases de l’accessibilité HTML",
+      "html": "<main>\n  <h1>Demander une information</h1>\n  <p>Les champs marqués comme obligatoires doivent être remplis.</p>\n  <form>\n    <label for=\"message\">Votre message</label>\n    <textarea id=\"message\" name=\"message\" required></textarea>\n    <button type=\"submit\">Envoyer le message</button>\n  </form>\n</main>",
+      "css": "",
+      "js": "",
+      "explanation": "Le titre décrit la tâche, le label nomme le champ et le bouton possède un intitulé compréhensible hors contexte."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Remplace le faux bouton par un véritable bouton HTML de type submit.",
+      "initialCode": "<div onclick=\"envoyer()\">Envoyer</div>",
+      "expectedResult": {
+        "tags": [
+          "button"
+        ],
+        "text": [
+          "Envoyer"
+        ],
+        "attributes": {
+          "type": "submit"
+        }
+      },
+      "hints": [
+        "L’élément natif est <button>.",
+        "Place type=\"submit\" dans sa balise ouvrante.",
+        "Un vrai bouton est utilisable au clavier nativement."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quel choix est généralement le plus accessible pour déclencher une action ?",
+      "answers": [
+        "Un div avec onclick",
+        "Un bouton HTML",
+        "Un paragraphe cliquable",
+        "Une image sans alternative"
+      ],
+      "correctAnswer": 1,
+      "explanation": "button apporte une sémantique et une interaction clavier natives. Il vaut mieux réutiliser les éléments HTML prévus pour chaque rôle."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Utilise des éléments natifs adaptés à leur rôle.",
+        "Associe chaque champ à un label.",
+        "Décris les images informatives avec alt.",
+        "Rends les intitulés de liens et boutons explicites."
+      ]
+    }
+  ]
+}

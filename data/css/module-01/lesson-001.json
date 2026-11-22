@@ -1,0 +1,78 @@
+{
+  "id": "css-001",
+  "title": "Écrire une règle CSS",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Comprends la syntaxe d’une règle CSS et relie une feuille de style à HTML.",
+  "duration": 8,
+  "xp": 70,
+  "objectives": [
+    "Identifier sélecteur, propriété et valeur",
+    "Écrire une déclaration valide",
+    "Relier une feuille CSS externe"
+  ],
+  "prerequisites": [],
+  "tags": [
+    "syntaxe",
+    "sélecteurs",
+    "feuille-de-style"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>CSS signifie <strong>Cascading Style Sheets</strong>. Il décrit la présentation des éléments HTML. Une règle contient un sélecteur, puis un bloc de déclarations entre accolades.</p><p>Chaque déclaration associe une propriété à une valeur : <code>color: navy;</code>. Il est courant de placer les règles dans un fichier externe relié avec <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;</code>.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Écrire une règle CSS",
+      "html": "<h1>Bienvenue</h1>\n<p>Ma première règle CSS.</p>",
+      "css": "h1 {\n  color: navy;\n  font-size: 2rem;\n}\n\np {\n  color: #444;\n}",
+      "js": "",
+      "explanation": "h1 et p sont les sélecteurs. color et font-size sont les propriétés ; navy, 2rem et #444 sont les valeurs."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Écris une déclaration qui colore le titre en bleu avec la propriété color.",
+      "initialCode": "h1 {\n  \n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": "h1",
+            "property": "color",
+            "value": "blue"
+          }
+        ]
+      },
+      "hints": [
+        "La propriété de couleur du texte est color.",
+        "Une déclaration prend la forme propriété: valeur;.",
+        "Place-la entre les accolades de h1."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle partie d’une règle CSS choisit les éléments HTML à styliser ?",
+      "answers": [
+        "La propriété",
+        "Le sélecteur",
+        "La valeur",
+        "Le point-virgule"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le sélecteur identifie les éléments auxquels les déclarations CSS s’appliquent."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Une règle contient un sélecteur et un bloc de déclarations.",
+        "Une déclaration associe propriété et valeur.",
+        "Les règles peuvent être regroupées dans une feuille externe."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "css-011",
+  "title": "Construire une grille avec CSS Grid",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Crée des colonnes et des lignes avec le modèle CSS Grid.",
+  "duration": 13,
+  "xp": 110,
+  "objectives": [
+    "Déclarer un conteneur grid",
+    "Définir des colonnes avec repeat et fr",
+    "Utiliser gap et les placements"
+  ],
+  "prerequisites": [
+    "css-007",
+    "css-008"
+  ],
+  "tags": [
+    "grid",
+    "colonnes",
+    "layout"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>CSS Grid est un modèle de mise en page bidimensionnel : il organise les éléments en lignes et colonnes. Déclare un conteneur avec <code>display: grid</code>, puis définis ses colonnes avec <code>grid-template-columns</code>.</p><p>L’unité <code>fr</code> répartit l’espace disponible. <code>repeat()</code> évite de répéter les mêmes définitions et <code>minmax()</code> définit une plage de taille.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Construire une grille avec CSS Grid",
+      "html": "<div class=\"galerie\">\n  <article>Photo 1</article>\n  <article>Photo 2</article>\n  <article>Photo 3</article>\n</div>",
+      "css": ".galerie {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 1rem;\n}",
+      "js": "",
+      "explanation": "La grille crée trois colonnes de largeur égale et un espace constant entre les cellules."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Définis deux colonnes de largeur égale avec repeat() et 1fr.",
+      "initialCode": ".galerie {\n  display: grid;\n  \n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".galerie",
+            "property": "grid-template-columns",
+            "value": "repeat(2, 1fr)"
+          }
+        ]
+      },
+      "hints": [
+        "La propriété est grid-template-columns.",
+        "repeat() reçoit le nombre de répétitions et la taille.",
+        "1fr partage l’espace disponible en parts égales."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "visual_demo",
+      "title": "Grille CSS",
+      "animation": "css-grid",
+      "description": "Visualisation de lignes, colonnes et cellules d’une grille."
+    },
+    {
+      "type": "quiz",
+      "question": "Quel modèle est conçu pour organiser une mise en page en lignes et colonnes ?",
+      "answers": [
+        "Flexbox",
+        "CSS Grid",
+        "float",
+        "inline"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CSS Grid est un modèle bidimensionnel qui contrôle les lignes et les colonnes."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Grid organise deux dimensions.",
+        "display: grid active une grille.",
+        "fr répartit l’espace disponible.",
+        "repeat et minmax simplifient les grilles flexibles."
+      ]
+    }
+  ]
+}

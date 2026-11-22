@@ -1,0 +1,59 @@
+/* ===================================================================
+   WebCraft - Light Theme
+   =================================================================== */
+
+:root {
+    /* Ensure light theme variables are set */
+    --color-background: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-text-primary: #1E293B;
+    --color-text-secondary: #64748B;
+    --color-text-muted: #94A3B8;
+    --color-border: #E2E8F0;
+    --color-border-dark: #CBD5E1;
+}
+
+[data-theme="light"] {
+    --color-background: #F8FAFC;
+    --color-surface: #FFFFFF;
+    --color-text-primary: #1E293B;
+    --color-text-secondary: #64748B;
+    --color-text-muted: #94A3B8;
+    --color-border: #E2E8F0;
+    --color-border-dark: #CBD5E1;
+    --color-primary: #3B82F6;
+    --color-primary-dark: #1D4ED8;
+    --color-primary-light: #93C5FD;
+    --color-primary-50: #EFF6FF;
+    --color-primary-100: #DBEAFE;
+    --color-secondary: #8B5CF6;
+    --color-secondary-dark: #7C3AED;
+    --color-secondary-light: #C4B5FD;
+    --color-secondary-50: #F5F3FF;
+    --color-secondary-100: #EDE9FE;
+    --color-accent: #F97316;
+    --color-accent-light: #FBBF24;
+    --color-accent-50: #FFF7ED;
+    --color-success: #10B981;
+    --color-success-light: #34D399;
+    --color-success-50: #ECFDF5;
+    --color-warning: #F59E0B;
+    --color-warning-light: #FBBF24;
+    --color-warning-50: #FFFBEB;
+    --color-error: #EF4444;
+    --color-error-light: #F87171;
+    --color-error-50: #FEF2F2;
+}
+
+[data-theme="light"] .code-content { background: #F8F8F8; color: #24292E; }
+[data-theme="light"] .code-content::before { color: #6E7681; border-right-color: #E2E8F0; }
+[data-theme="light"] .result-panel { background: white; }
+[data-theme="light"] .editor-tabs { background: #F8F8F8; border-bottom-color: #E2E8F0; }
+[data-theme="light"] .tab-btn { color: #6E7681; }
+[data-theme="light"] .tab-btn:hover { color: #24292E; background: #E2E8F0; }
+[data-theme="light"] .tab-btn.active { color: #3B82F6; background: white; border-bottom-color: #3B82F6; }
+[data-theme="light"] .code-header { background: #F0F0F0; border-bottom-color: #E2E8F0; }
+[data-theme="light"] .file-name { color: #6E7681; }
+[data-theme="light"] .editor-footer { background: #F8F8F8; border-top-color: #E2E8F0; }
+
+[data-theme="light"] .code-content { color-scheme: light; }

@@ -1,0 +1,101 @@
+/* ===================================================================
+   WebCraft - Progress Bar Component
+   =================================================================== */
+
+/* Linear Progress Bar */
+.progress-bar {
+    height: 8px; width: 100%;
+    background: var(--color-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease;
+}
+
+/* Progress Container */
+.progress-container { width: 100%; margin: var(--space-md) 0; }
+.progress-label { display: block; margin-bottom: var(--space-xs); font-size: var(--text-sm); color: var(--color-text-secondary); }
+.progress-details { display: flex; justify-content: space-between; font-size: var(--text-sm); color: var(--color-text-secondary); margin-top: var(--space-xs); }
+
+/* Circular Progress */
+.progress-circular { position: relative; width: 80px; height: 80px; }
+.circular-chart { display: block; width: 100%; height: 100%; }
+.circle-bg { fill: none; stroke: var(--color-border); stroke-width: 8; }
+.circle {
+    fill: none; stroke: var(--color-primary); stroke-width: 8;
+    stroke-linecap: round; animation: progress 1s ease-out forwards;
+}
+.percent {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--text-sm); font-weight: 600; color: var(--color-text-primary);
+}
+@keyframes progress { 0% { stroke-dashoffset: 283; } }
+
+/* Progress with Label */
+.progress-with-label { display: flex; align-items: center; gap: var(--space-md); }
+.progress-with-label .progress-bar { flex: 1; }
+
+/* Vertical Progress Bar */
+.progress-vertical { width: 8px; height: 100px; background: var(--color-border); border-radius: var(--radius-full); overflow: hidden; }
+.progress-vertical .progress-fill { width: 100%; height: 0%; border-radius: var(--radius-full); transition: height 0.5s ease; }
+
+/* Progress Steps */
+.progress-steps {
+    display: flex; justify-content: space-between; position: relative;
+    margin: var(--space-xl) 0;
+}
+.progress-steps::before {
+    content: ''; position: absolute; top: 50%; left: 0; right: 0;
+    height: 2px; background: var(--color-border); z-index: 1;
+}
+.progress-step {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: var(--space-sm);
+}
+.step-number {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--color-background); border: 2px solid var(--color-border);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600; color: var(--color-text-muted); transition: all var(--transition-base);
+}
+.progress-step.completed .step-number { background: var(--color-success); border-color: var(--color-success); color: white; }
+.progress-step.active .step-number { background: var(--color-primary); border-color: var(--color-primary); color: white; }
+.progress-step:not(:last-child)::after {
+    content: ''; position: absolute; top: 20px; left: 50%;
+    width: 100%; height: 2px; background: var(--color-border); z-index: -1;
+}
+.progress-step.completed:not(:last-child)::after { background: var(--color-success); }
+.step-label { font-size: var(--text-xs); color: var(--color-text-muted); text-align: center; }
+.progress-step.completed .step-label { color: var(--color-success); }
+.progress-step.active .step-label { color: var(--color-primary); font-weight: 500; }
+
+/* Indeterminate Progress */
+.progress-indeterminate { position: relative; overflow: hidden; }
+.progress-indeterminate::after {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%; background: var(--gradient-primary);
+    border-radius: var(--radius-full); animation: indeterminate 1.5s infinite;
+}
+@keyframes indeterminate { 0% { left: -100%; } 100% { left: 100%; } }
+
+/* Striped Progress */
+.progress-striped {
+    background: repeating-linear-gradient(
+        45deg,
+        var(--color-border),
+        var(--color-border) 10px,
+        var(--color-background) 10px,
+        var(--color-background) 20px
+    );
+}
+
+/* Progress Sizes */
+.progress-sm { height: 4px; }
+.progress-md { height: 8px; }
+.progress-lg { height: 12px; }
+.progress-xl { height: 16px; }

@@ -1,0 +1,80 @@
+{
+  "id": "css-004",
+  "title": "Choisir des couleurs et des transparences",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Déclare des couleurs avec les syntaxes hexadécimale, RGB et HSL.",
+  "duration": 8,
+  "xp": 75,
+  "objectives": [
+    "Écrire une couleur hexadécimale",
+    "Utiliser rgb et hsl",
+    "Contrôler le contraste du texte"
+  ],
+  "prerequisites": [
+    "css-001"
+  ],
+  "tags": [
+    "couleurs",
+    "rgb",
+    "contraste"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>CSS accepte plusieurs formats de couleur : noms prédéfinis, hexadécimal, <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et <code>hsla()</code>. La transparence peut être exprimée avec un canal alpha ou la syntaxe moderne slash.</p><p>La couleur ne doit pas être le seul moyen de transmettre une information. Vérifie aussi le contraste entre texte et arrière-plan pour conserver une bonne lisibilité.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Choisir des couleurs et des transparences",
+      "html": "<div class=\"alerte\">Attention : sauvegarde ton fichier.</div>",
+      "css": ".alerte {\n  color: #7a1f1f;\n  background-color: rgb(255 230 230);\n  border: 1px solid hsl(0 60% 75%);\n  padding: 1rem;\n}",
+      "js": "",
+      "explanation": "Les trois déclarations utilisent des notations différentes. Le navigateur convertit ces couleurs pour les afficher."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Remplace la couleur du texte par le bleu hexadécimal #174ea6.",
+      "initialCode": ".carte {\n  color: black;\n  background-color: white;\n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".carte",
+            "property": "color",
+            "value": "#174ea6"
+          }
+        ]
+      },
+      "hints": [
+        "Une couleur hexadécimale commence par #.",
+        "La propriété concernée est color.",
+        "Conserve background-color indépendant."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle fonction CSS représente une teinte, une saturation et une luminosité ?",
+      "answers": [
+        "rgb()",
+        "hsl()",
+        "url()",
+        "calc()"
+      ],
+      "correctAnswer": 1,
+      "explanation": "hsl() permet de définir une couleur avec teinte (hue), saturation et luminosité (lightness)."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Les couleurs peuvent être écrites en hexadécimal, RGB ou HSL.",
+        "Le canal alpha règle la transparence.",
+        "Le contraste est essentiel à la lisibilité."
+      ]
+    }
+  ]
+}

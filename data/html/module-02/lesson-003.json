@@ -1,0 +1,86 @@
+{
+  "id": "html-008",
+  "title": "Structurer une page avec les éléments sémantiques",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Utilise les régions HTML pour donner du sens à l’organisation d’une page.",
+  "duration": 12,
+  "xp": 100,
+  "objectives": [
+    "Identifier header, nav, main et footer",
+    "Choisir article ou section selon le contenu",
+    "Améliorer la navigation et la compréhension du document"
+  ],
+  "prerequisites": [
+    "html-002",
+    "html-004"
+  ],
+  "tags": [
+    "sémantique",
+    "landmarks",
+    "structure"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les éléments sémantiques décrivent le rôle des grandes régions. <code>&lt;header&gt;</code> présente une page ou une section, <code>&lt;nav&gt;</code> regroupe des liens de navigation, <code>&lt;main&gt;</code> contient le contenu principal et <code>&lt;footer&gt;</code> regroupe des informations de pied de page.</p><p><code>&lt;article&gt;</code> convient à un contenu autonome qui pourrait être repris séparément. <code>&lt;section&gt;</code> regroupe un thème cohérent et devrait généralement avoir un titre.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Structurer une page avec les éléments sémantiques",
+      "html": "<header><h1>Le carnet du randonneur</h1></header>\n<nav aria-label=\"Navigation principale\"><a href=\"#conseils\">Conseils</a></nav>\n<main>\n  <article>\n    <h2>Bien choisir ses chaussures</h2>\n    <p>Le confort dépend du terrain et de la durée.</p>\n  </article>\n  <section id=\"conseils\"><h2>Conseils pratiques</h2><p>Prévois de l’eau.</p></section>\n</main>\n<footer><p>© Carnet du randonneur</p></footer>",
+      "css": "",
+      "js": "",
+      "explanation": "Les régions sémantiques rendent la structure plus explicite. Une navigation nommée est utile lorsqu’il existe plusieurs éléments nav."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Remplace le conteneur générique par une structure adaptée : header pour le titre, main pour le contenu principal.",
+      "initialCode": "<div>\n  <h1>Mon site</h1>\n  <p>Contenu principal</p>\n</div>",
+      "expectedResult": {
+        "tags": [
+          "header",
+          "main",
+          "h1",
+          "p"
+        ],
+        "text": [
+          "Mon site",
+          "Contenu principal"
+        ]
+      },
+      "hints": [
+        "Le titre de présentation va dans <header>.",
+        "Le contenu central va dans <main>.",
+        "Évite de créer plusieurs main visibles dans le même document."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quel élément doit contenir le contenu principal unique de la page ?",
+      "answers": [
+        "<footer>",
+        "<main>",
+        "<nav>",
+        "<aside>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "main identifie le contenu dominant du document. Il ne doit normalement pas être répété pour plusieurs zones principales."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "header présente une page ou une section.",
+        "nav regroupe des liens de navigation.",
+        "main identifie le contenu principal.",
+        "article convient à un contenu autonome.",
+        "section regroupe un thème cohérent."
+      ]
+    }
+  ]
+}

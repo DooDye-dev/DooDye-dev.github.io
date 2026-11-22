@@ -1,0 +1,87 @@
+{
+  "id": "css-005",
+  "title": "Mettre en forme la typographie",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Choisis une police, une taille, une graisse et un interlignage lisibles.",
+  "duration": 9,
+  "xp": 80,
+  "objectives": [
+    "Définir font-family et font-size",
+    "Régler font-weight et line-height",
+    "Prévoir une famille de secours"
+  ],
+  "prerequisites": [
+    "css-001"
+  ],
+  "tags": [
+    "typographie",
+    "polices",
+    "lisibilité"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les propriétés typographiques contrôlent l’apparence du texte. <code>font-family</code> définit une liste de polices de secours, <code>font-size</code> la taille, <code>font-weight</code> la graisse et <code>line-height</code> la hauteur de ligne.</p><p>Les unités relatives comme rem facilitent l’adaptation à la taille de texte de référence. Évite de réduire excessivement le texte ou d’utiliser des interlignages trop serrés.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Mettre en forme la typographie",
+      "html": "<article class=\"article\">\n  <h1>Lire confortablement</h1>\n  <p>Un bon interlignage facilite le suivi des lignes.</p>\n</article>",
+      "css": ".article {\n  font-family: Arial, sans-serif;\n  font-size: 1rem;\n  line-height: 1.6;\n}\n.article h1 { font-weight: 700; }",
+      "js": "",
+      "explanation": "La pile de polices prévoit sans-serif si Arial n’est pas disponible. line-height augmente l’espace vertical entre les lignes."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute un interlignage de 1.5 au paragraphe.",
+      "initialCode": "p {\n  font-family: Arial;\n  \n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": "p",
+            "property": "line-height",
+            "value": "1.5"
+          }
+        ]
+      },
+      "hints": [
+        "La propriété s’appelle line-height.",
+        "Une valeur sans unité peut représenter un multiplicateur.",
+        "Ajoute un point-virgule à la fin."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "visual_demo",
+      "title": "Anatomie du modèle de boîte",
+      "animation": "box-model",
+      "description": "Visualisation du contenu, du padding, de la bordure et de la marge."
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle propriété règle la hauteur de ligne du texte ?",
+      "answers": [
+        "font-style",
+        "line-height",
+        "text-align",
+        "letter-spacing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "line-height contrôle la hauteur de ligne, donc l’espace vertical occupé par les lignes de texte."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "font-family définit la famille typographique.",
+        "font-size définit la taille.",
+        "font-weight règle la graisse.",
+        "line-height améliore le confort de lecture."
+      ]
+    }
+  ]
+}

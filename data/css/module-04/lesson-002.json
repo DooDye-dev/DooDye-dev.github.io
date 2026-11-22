@@ -1,0 +1,87 @@
+{
+  "id": "css-017",
+  "title": "Créer des variables CSS",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Centralise les couleurs et espacements avec les propriétés personnalisées.",
+  "duration": 10,
+  "xp": 95,
+  "objectives": [
+    "Déclarer une custom property",
+    "Réutiliser une variable avec var()",
+    "Prévoir une valeur de secours"
+  ],
+  "prerequisites": [
+    "css-003",
+    "css-005"
+  ],
+  "tags": [
+    "variables",
+    "custom-properties",
+    "thème"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les propriétés personnalisées CSS, souvent appelées variables CSS, commencent par deux tirets : <code>--couleur-principale</code>. Elles sont déclarées sur un sélecteur et réutilisées avec <code>var()</code>.</p><p>Déclarées sur <code>:root</code>, elles sont généralement disponibles dans tout le document. <code>var(--nom, valeur)</code> permet de définir une valeur de secours si la variable n’est pas définie ou valide.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Créer des variables CSS",
+      "html": "<button class=\"bouton\">Continuer</button>",
+      "css": ":root {\n  --couleur-principale: #174ea6;\n  --espace: 1rem;\n}\n.bouton {\n  background: var(--couleur-principale);\n  padding: var(--espace);\n}",
+      "js": "",
+      "explanation": "Les valeurs centralisées sur :root peuvent être réutilisées dans plusieurs composants et modifiées à un seul endroit."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Utilise la variable --couleur avec var() pour colorer le titre.",
+      "initialCode": ":root {\n  --couleur: navy;\n}\n.titre { color: ; }",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ":root",
+            "property": "--couleur",
+            "value": "navy"
+          },
+          {
+            "selector": ".titre",
+            "property": "color",
+            "value": "var(--couleur)"
+          }
+        ]
+      },
+      "hints": [
+        "La fonction s’écrit var(--couleur).",
+        "La variable commence par deux tirets.",
+        "La déclaration se place dans .titre."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Comment réutilise-t-on une propriété personnalisée CSS ?",
+      "answers": [
+        "calc(--nom)",
+        "var(--nom)",
+        "use(--nom)",
+        "get(--nom)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "var() lit une propriété personnalisée, par exemple var(--couleur-principale)."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Une variable CSS commence par --.",
+        ":root est un emplacement courant pour les valeurs globales.",
+        "var() réutilise une variable.",
+        "Une valeur de secours peut être fournie à var()."
+      ]
+    }
+  ]
+}

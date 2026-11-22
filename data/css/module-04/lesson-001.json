@@ -1,0 +1,80 @@
+{
+  "id": "css-016",
+  "title": "Animer les changements avec transitions et transforms",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Ajoute des transitions sobres et des transformations sans perturber l’usage.",
+  "duration": 12,
+  "xp": 105,
+  "objectives": [
+    "Définir transition-property et duration",
+    "Utiliser transform",
+    "Respecter prefers-reduced-motion"
+  ],
+  "prerequisites": [
+    "css-012"
+  ],
+  "tags": [
+    "transitions",
+    "transform",
+    "animation"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Une transition anime le passage entre deux valeurs CSS lorsque l’état change. La propriété <code>transition</code> permet de choisir la propriété concernée, la durée et la fonction de progression.</p><p><code>transform</code> peut déplacer, tourner ou redimensionner un élément sans modifier le flux. Pense à respecter la préférence utilisateur <code>prefers-reduced-motion</code> pour réduire les animations non essentielles.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Animer les changements avec transitions et transforms",
+      "html": "<button class=\"carte-action\">Découvrir</button>",
+      "css": ".carte-action { transition: transform 180ms ease, background-color 180ms ease; }\n.carte-action:hover { transform: translateY(-3px); }\n@media (prefers-reduced-motion: reduce) {\n  .carte-action { transition: none; }\n}",
+      "js": "",
+      "explanation": "La transition adoucit le changement d’état. transform déplace légèrement le bouton ; la media query désactive la transition si l’utilisateur réduit les animations."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute une transition de transform durant 200ms avec une accélération ease.",
+      "initialCode": ".bouton {\n  transition: ;\n}\n.bouton:hover { transform: scale(1.03); }",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".bouton",
+            "property": "transition",
+            "value": "transform 200ms ease"
+          }
+        ]
+      },
+      "hints": [
+        "La propriété raccourcie est transition.",
+        "Indique la propriété transform.",
+        "La durée s’écrit 200ms et la fonction ease."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle propriété transforme visuellement un élément sans modifier sa place dans le flux ?",
+      "answers": [
+        "margin",
+        "transform",
+        "display",
+        "float"
+      ],
+      "correctAnswer": 1,
+      "explanation": "transform applique une transformation visuelle comme translate, rotate ou scale sans recalculer la place de l’élément dans le flux normal."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "transition anime un changement de valeur.",
+        "transform translate, rotate ou scale un élément.",
+        "prefers-reduced-motion respecte une préférence utilisateur."
+      ]
+    }
+  ]
+}

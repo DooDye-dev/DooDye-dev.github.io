@@ -1,0 +1,87 @@
+{
+  "id": "css-006",
+  "title": "Comprendre le modèle de boîte",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Maîtrise content, padding, border et margin pour dimensionner les éléments.",
+  "duration": 10,
+  "xp": 90,
+  "objectives": [
+    "Identifier les quatre zones de la boîte",
+    "Différencier padding et margin",
+    "Utiliser box-sizing border-box"
+  ],
+  "prerequisites": [
+    "css-001"
+  ],
+  "tags": [
+    "box-model",
+    "padding",
+    "margin"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Chaque élément CSS est représenté par une boîte composée du contenu, du padding (espace intérieur), de la bordure et de la marge extérieure.</p><p>Avec <code>box-sizing: content-box</code>, width ne comprend que le contenu. Avec <code>border-box</code>, width inclut le contenu, le padding et la bordure, ce qui simplifie souvent les calculs de mise en page.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Comprendre le modèle de boîte",
+      "html": "<div class=\"carte\">Contenu de la carte</div>",
+      "css": "* { box-sizing: border-box; }\n.carte {\n  width: 300px;\n  padding: 20px;\n  border: 2px solid #333;\n  margin: 16px;\n}",
+      "js": "",
+      "explanation": "La carte fait 300 pixels de large bordure comprise grâce à border-box. padding crée de l’espace à l’intérieur, margin à l’extérieur."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute 12px d’espace intérieur et 20px de marge extérieure à la boîte.",
+      "initialCode": ".boite {\n  width: 200px;\n  \n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".boite",
+            "property": "padding",
+            "value": "12px"
+          },
+          {
+            "selector": ".boite",
+            "property": "margin",
+            "value": "20px"
+          }
+        ]
+      },
+      "hints": [
+        "L’espace intérieur utilise padding.",
+        "L’espace extérieur utilise margin.",
+        "Les deux déclarations appartiennent à .boite."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle propriété crée l’espace entre le contenu et la bordure ?",
+      "answers": [
+        "margin",
+        "padding",
+        "outline",
+        "gap"
+      ],
+      "correctAnswer": 1,
+      "explanation": "padding est l’espace intérieur situé entre le contenu et la bordure."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "content contient le contenu.",
+        "padding est l’espace intérieur.",
+        "border entoure la boîte.",
+        "margin crée l’espace extérieur.",
+        "border-box inclut padding et bordure dans la largeur déclarée."
+      ]
+    }
+  ]
+}

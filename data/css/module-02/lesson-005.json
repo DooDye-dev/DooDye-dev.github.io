@@ -1,0 +1,93 @@
+{
+  "id": "css-010",
+  "title": "Créer une mise en page avec Flexbox",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Aligne et répartis des éléments sur un axe avec le modèle flexible.",
+  "duration": 12,
+  "xp": 105,
+  "objectives": [
+    "Activer display flex",
+    "Utiliser justify-content et align-items",
+    "Gérer gap et flex-wrap"
+  ],
+  "prerequisites": [
+    "css-007",
+    "css-008"
+  ],
+  "tags": [
+    "flexbox",
+    "alignement",
+    "layout"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Flexbox est un modèle de mise en page unidimensionnel. Le conteneur devient flexible avec <code>display: flex</code>. L’axe principal est défini par flex-direction.</p><p><code>justify-content</code> répartit les éléments sur l’axe principal et <code>align-items</code> les aligne sur l’axe transversal. <code>gap</code> règle l’espace entre les éléments sans ajouter de marges individuelles.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Créer une mise en page avec Flexbox",
+      "html": "<nav class=\"menu\">\n  <a href=\"#accueil\">Accueil</a>\n  <a href=\"#cours\">Cours</a>\n  <a href=\"#contact\">Contact</a>\n</nav>",
+      "css": ".menu {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 1rem;\n}",
+      "js": "",
+      "explanation": "Flexbox distribue les liens sur l’axe principal. align-items les aligne sur l’axe transversal et gap contrôle l’espace entre eux."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Centre les éléments sur l’axe principal et ajoute 12px d’espace entre eux.",
+      "initialCode": ".menu {\n  display: flex;\n  \n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".menu",
+            "property": "justify-content",
+            "value": "center"
+          },
+          {
+            "selector": ".menu",
+            "property": "gap",
+            "value": "12px"
+          }
+        ]
+      },
+      "hints": [
+        "L’alignement principal se règle avec justify-content.",
+        "La valeur demandée est center.",
+        "L’espace entre éléments se règle avec gap."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "visual_demo",
+      "title": "Axes Flexbox",
+      "animation": "flexbox-axes",
+      "description": "Visualisation de l’axe principal et de l’axe transversal selon flex-direction."
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle propriété Flexbox aligne les éléments sur l’axe principal ?",
+      "answers": [
+        "align-items",
+        "justify-content",
+        "flex-wrap",
+        "order"
+      ],
+      "correctAnswer": 1,
+      "explanation": "justify-content distribue les éléments le long de l’axe principal défini par flex-direction."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Flexbox est un modèle unidimensionnel.",
+        "justify-content agit sur l’axe principal.",
+        "align-items agit sur l’axe transversal.",
+        "gap gère les espaces entre éléments."
+      ]
+    }
+  ]
+}

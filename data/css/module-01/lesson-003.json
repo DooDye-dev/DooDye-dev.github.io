@@ -1,0 +1,81 @@
+{
+  "id": "css-003",
+  "title": "Comprendre la cascade et la spécificité",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Prévois quelle déclaration CSS gagne lorsque plusieurs règles se rencontrent.",
+  "duration": 12,
+  "xp": 100,
+  "objectives": [
+    "Décrire le rôle de la cascade",
+    "Comparer la spécificité des sélecteurs",
+    "Limiter les usages de !important"
+  ],
+  "prerequisites": [
+    "css-002"
+  ],
+  "tags": [
+    "cascade",
+    "spécificité",
+    "maintenance"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>La cascade décide quelle déclaration s’applique lorsque plusieurs règles ciblent la même propriété. Le résultat dépend notamment de l’origine, de l’importance, de la couche, de la spécificité et de l’ordre d’apparition.</p><p>À origine et importance comparables, un sélecteur avec un id est plus spécifique qu’une classe, elle-même plus spécifique qu’un sélecteur de type. <code>!important</code> modifie fortement la priorité et doit rester exceptionnel.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Comprendre la cascade et la spécificité",
+      "html": "<p id=\"intro\" class=\"note\">Bienvenue</p>",
+      "css": "p { color: black; }\n.note { color: steelblue; }\n#intro { color: darkgreen; }",
+      "js": "",
+      "explanation": "Les trois règles ciblent le même paragraphe. Le sélecteur d’id est le plus spécifique dans cet exemple, donc le texte devient darkgreen."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute une règle pour #message qui colore le paragraphe en vert.",
+      "initialCode": "p { color: black; }\n.note { color: blue; }",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": "#message",
+            "property": "color",
+            "value": "green"
+          }
+        ]
+      },
+      "hints": [
+        "Le sélecteur d’id commence par #.",
+        "La règle doit cibler #message.",
+        "La propriété demandée est color."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Entre un sélecteur de type, une classe et un id, lequel a la spécificité la plus élevée ?",
+      "answers": [
+        "Le type",
+        "La classe",
+        "L’id",
+        "Ils ont toujours la même spécificité"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un id possède une spécificité supérieure à celle d’une classe ou d’un sélecteur de type, à conditions de cascade égales."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "La cascade arbitre les déclarations concurrentes.",
+        "L’id est plus spécifique qu’une classe.",
+        "Une classe est plus spécifique qu’un type.",
+        "Évite de multiplier les !important."
+      ]
+    }
+  ]
+}

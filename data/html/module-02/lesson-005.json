@@ -1,0 +1,84 @@
+{
+  "id": "html-010",
+  "title": "Associer labels et champs de saisie",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Crée des champs de formulaire compréhensibles et utilisables au clavier.",
+  "duration": 9,
+  "xp": 85,
+  "objectives": [
+    "Associer label et input",
+    "Choisir un type de champ adapté",
+    "Utiliser id, name et placeholder correctement"
+  ],
+  "prerequisites": [
+    "html-009"
+  ],
+  "tags": [
+    "input",
+    "label",
+    "formulaires"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Un élément <code>&lt;label&gt;</code> donne un intitulé à un champ. Associe-le à l’<code>id</code> du champ grâce à l’attribut <code>for</code>. Cette association agrandit aussi la zone cliquable et facilite l’utilisation des lecteurs d’écran.</p><p>Choisis un type précis : <code>email</code>, <code>tel</code>, <code>number</code>, <code>date</code>, <code>password</code> ou <code>search</code>. Le placeholder est un exemple ou une indication courte, pas un remplacement du label.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Associer labels et champs de saisie",
+      "html": "<form>\n  <label for=\"email\">Adresse e-mail</label>\n  <input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" required>\n  <button type=\"submit\">S’inscrire</button>\n</form>",
+      "css": "",
+      "js": "",
+      "explanation": "for et id relient le label au champ. type=email active une validation de format native et required rend le champ obligatoire."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute l’attribut type=\"text\" au champ et rends-le obligatoire avec required.",
+      "initialCode": "<form>\n  <label for=\"prenom\">Prénom</label>\n  <input id=\"prenom\" name=\"prenom\">\n</form>",
+      "expectedResult": {
+        "tags": [
+          "label",
+          "input"
+        ],
+        "attributes": {
+          "type": "text",
+          "required": true,
+          "id": "prenom",
+          "name": "prenom"
+        }
+      },
+      "hints": [
+        "Les attributs se placent dans la balise ouvrante input.",
+        "required est un attribut booléen.",
+        "Conserve id et name pour maintenir l’association et l’envoi."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Pourquoi associer un label à un input ?",
+      "answers": [
+        "Pour changer sa couleur",
+        "Pour donner un nom accessible au champ",
+        "Pour envoyer automatiquement le formulaire",
+        "Pour masquer le champ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le label fournit un intitulé programmatique au champ et améliore son utilisation, notamment avec les lecteurs d’écran."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "label donne un intitulé au champ.",
+        "for doit correspondre à l’id du champ.",
+        "name détermine la clé envoyée.",
+        "placeholder ne remplace pas le label."
+      ]
+    }
+  ]
+}

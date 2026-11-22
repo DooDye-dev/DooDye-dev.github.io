@@ -1,0 +1,96 @@
+{
+  "id": "css-018",
+  "title": "Réaliser une interface responsive",
+  "category": "css",
+  "level": "Avancé",
+  "description": "Combine unités fluides, Grid et media queries dans une page adaptable.",
+  "duration": 18,
+  "xp": 140,
+  "objectives": [
+    "Créer une structure mobile-first",
+    "Faire évoluer une grille selon l’espace",
+    "Vérifier le contenu à différentes largeurs"
+  ],
+  "prerequisites": [
+    "css-009",
+    "css-010",
+    "css-011",
+    "css-016"
+  ],
+  "tags": [
+    "projet",
+    "responsive",
+    "grid"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Une interface responsive adapte sa structure, ses dimensions et ses espaces à l’espace réellement disponible. Une base mobile-first limite d’abord les colonnes, puis introduit des mises en page plus denses sur les écrans larges.</p><p>Combine des largeurs maximales, des unités fluides, des grilles auto-adaptatives et quelques media queries utiles. Teste les textes longs, les zooms et les états de focus, pas seulement une largeur de téléphone précise.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Réaliser une interface responsive",
+      "html": "<main class=\"page\">\n  <header><h1>Le studio créatif</h1><p>Des idées à partager</p></header>\n  <section class=\"grille\"><article>Identité visuelle</article><article>Photographie</article><article>Web design</article></section>\n</main>",
+      "css": ":root { --espace: clamp(1rem, 3vw, 2rem); }\n.page { width: min(92%, 72rem); margin-inline: auto; }\n.grille { display: grid; grid-template-columns: 1fr; gap: var(--espace); }\n@media (min-width: 720px) { .grille { grid-template-columns: repeat(3, minmax(0, 1fr)); } }",
+      "js": "",
+      "explanation": "Le contenu reste centré et limité en largeur. La grille passe d’une à trois colonnes lorsque l’espace devient suffisant."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Dans la media query, configure trois colonnes égales avec repeat() et 1fr.",
+      "initialCode": ".grille {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 720px) {\n  .grille {  }\n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".grille",
+            "property": "grid-template-columns",
+            "value": "repeat(3, 1fr)"
+          }
+        ]
+      },
+      "hints": [
+        "La déclaration se place dans .grille à l’intérieur de la media query.",
+        "Utilise grid-template-columns.",
+        "repeat(3, 1fr) crée trois colonnes égales."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle approche commence par les styles pour petits écrans puis enrichit la mise en page ?",
+      "answers": [
+        "Desktop-first",
+        "Mobile-first",
+        "Print-first",
+        "Fixed-width"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Mobile-first consiste à construire une base fonctionnelle pour les petits écrans, puis à ajouter des adaptations lorsque davantage d’espace est disponible."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Mobile-first commence par les contraintes les plus fortes.",
+        "Une largeur maximale évite les lignes trop longues.",
+        "Grid et les unités fluides favorisent l’adaptation.",
+        "Teste aussi le zoom, les textes longs et le clavier."
+      ]
+    },
+    {
+      "type": "challenge",
+      "title": "Défi : interface responsive",
+      "description": "Transforme une liste de services en une grille responsive lisible sur mobile et ordinateur.",
+      "requirements": [
+        "Utiliser une largeur maximale pour le contenu",
+        "Commencer avec une seule colonne",
+        "Passer à trois colonnes sur écran large",
+        "Ajouter des espacements cohérents avec des variables CSS"
+      ],
+      "xpReward": 120
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "html-001",
+  "title": "Découvrir un document HTML",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Comprends le rôle du HTML et construis la structure minimale d’une page.",
+  "duration": 8,
+  "xp": 70,
+  "objectives": [
+    "Expliquer le rôle du HTML",
+    "Reconnaître DOCTYPE, html, head et body",
+    "Créer un document HTML valide"
+  ],
+  "prerequisites": [],
+  "tags": [
+    "structure",
+    "document",
+    "balises"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>HTML signifie <strong>HyperText Markup Language</strong>. Il décrit la structure et le sens du contenu : titres, paragraphes, liens, images et formulaires. Le navigateur lit les éléments HTML pour construire le DOM.</p><p>Un document commence par <code>&lt;!DOCTYPE html&gt;</code>, contient un élément <code>&lt;html&gt;</code>, puis sépare les informations de page dans <code>&lt;head&gt;</code> et le contenu affiché dans <code>&lt;body&gt;</code>.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Découvrir un document HTML",
+      "html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Ma première page</title>\n</head>\n<body>\n  <h1>Bonjour le monde !</h1>\n  <p>Ma première page est en ligne.</p>\n</body>\n</html>",
+      "css": "",
+      "js": "",
+      "explanation": "DOCTYPE indique au navigateur d’utiliser le HTML moderne. `lang` précise la langue, `head` contient les métadonnées et `body` contient le contenu visible."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Complète le titre de l’onglet avec « Ma page » puis ajoute un titre principal « Bienvenue » et un paragraphe « Je découvre HTML » dans le body.",
+      "initialCode": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title></title>\n</head>\n<body>\n  \n</body>\n</html>",
+      "expectedResult": {
+        "tags": [
+          "title",
+          "h1",
+          "p"
+        ],
+        "text": [
+          "Ma page",
+          "Bienvenue",
+          "Je découvre HTML"
+        ]
+      },
+      "hints": [
+        "Le titre de l’onglet se place dans <title>.",
+        "Le contenu visible se place dans <body>.",
+        "Utilise <h1> puis <p> pour les deux textes."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "visual_demo",
+      "title": "Construction du document",
+      "animation": "dom-construction",
+      "description": "Le navigateur analyse le document, crée l’élément html puis ses branches head et body."
+    },
+    {
+      "type": "quiz",
+      "question": "Quel élément contient le contenu visible d’une page ?",
+      "answers": [
+        "<head>",
+        "<body>",
+        "<title>",
+        "<meta>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le navigateur affiche le contenu placé dans <body>. La balise <head> contient plutôt les métadonnées et les liens vers les ressources."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "HTML décrit la structure et le sens du contenu.",
+        "DOCTYPE déclare un document HTML moderne.",
+        "head contient les métadonnées de la page.",
+        "body contient les éléments visibles."
+      ]
+    }
+  ]
+}

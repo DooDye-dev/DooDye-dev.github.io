@@ -1,0 +1,81 @@
+{
+  "id": "css-007",
+  "title": "Utiliser les unités et les fonctions de taille",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Choisis des unités adaptées et dimensionne avec min, max et calc.",
+  "duration": 11,
+  "xp": 95,
+  "objectives": [
+    "Comparer px, rem, %, vw et vh",
+    "Utiliser min-width et max-width",
+    "Composer des dimensions avec calc"
+  ],
+  "prerequisites": [
+    "css-005"
+  ],
+  "tags": [
+    "unités",
+    "dimensionnement",
+    "responsive"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les pixels CSS sont utiles pour certaines dimensions précises. <code>rem</code> dépend de la taille de police de l’élément racine, <code>%</code> dépend du contexte de la propriété, et <code>vw</code>/<code>vh</code> dépendent de la fenêtre.</p><p>Les fonctions <code>min()</code>, <code>max()</code> et <code>clamp()</code> permettent de borner une valeur. <code>calc()</code> réalise un calcul entre valeurs compatibles.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Utiliser les unités et les fonctions de taille",
+      "html": "<main class=\"contenu\">\n  <h1>Un contenu fluide</h1>\n  <p>La largeur s’adapte sans devenir illisible.</p>\n</main>",
+      "css": ".contenu {\n  width: min(90%, 70rem);\n  margin-inline: auto;\n  padding: clamp(1rem, 3vw, 2rem);\n}",
+      "js": "",
+      "explanation": "min limite la largeur à la plus petite valeur entre 90% et 70rem. clamp maintient le padding entre un minimum et un maximum."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Limite la largeur du contenu à 60rem tout en gardant une largeur fluide de 90%.",
+      "initialCode": ".contenu {\n  width: 100%;\n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".contenu",
+            "property": "width",
+            "value": "min(90%, 60rem)"
+          }
+        ]
+      },
+      "hints": [
+        "La fonction min() choisit la valeur la plus petite.",
+        "Combine 90% et 60rem dans width.",
+        "La fonction prend deux arguments séparés par une virgule."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle unité est relative à la taille de police de l’élément racine ?",
+      "answers": [
+        "px",
+        "rem",
+        "vw",
+        "%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "rem est relative à la taille de police de l’élément racine (html)."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "px est une unité CSS absolue de référence.",
+        "rem dépend de la taille de police racine.",
+        "vw et vh dépendent des dimensions de la fenêtre.",
+        "clamp borne une valeur entre un minimum et un maximum."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon - WebCraft</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/lesson.css">
+    <link rel="stylesheet" href="css/themes/light.css" id="theme-stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">WebCraft</span>
+            </a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="lessons.html" class="nav-link">Leçons</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="dashboard.html" class="nav-link">Tableau de bord</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-icon theme-toggle" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="lesson">
+            <div class="container">
+                <div id="lesson-container">
+                    <!-- Le contenu de la leçon sera chargé dynamiquement -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>WebCraft © 2024 - Une plateforme éducative</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/data/loader.js"></script>
+    <script src="js/models/UserProgress.js"></script>
+    <script src="js/views/LessonView.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lessonId = urlParams.get('lesson');
+
+            if (lessonId) {
+                const coursesData = loader.loadCourses();
+                const lessonData = loader.findLessonById(lessonId, coursesData);
+                const userProgress = new UserProgress();
+
+                if (lessonData) {
+                    new LessonView(lessonData, userProgress, coursesData);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

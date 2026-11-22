@@ -1,0 +1,82 @@
+{
+  "id": "html-003",
+  "title": "Mettre en valeur le texte",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Utilise les éléments HTML de mise en évidence avec leur sens sémantique.",
+  "duration": 8,
+  "xp": 75,
+  "objectives": [
+    "Distinguer importance et emphase",
+    "Employer strong et em correctement",
+    "Identifier mark, code et small"
+  ],
+  "prerequisites": [
+    "html-002"
+  ],
+  "tags": [
+    "texte",
+    "sémantique",
+    "emphase"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>HTML propose des éléments qui donnent du sens à une portion de texte. <code>&lt;strong&gt;</code> indique une importance forte et <code>&lt;em&gt;</code> une emphase. Les navigateurs leur donnent souvent un style gras ou italique par défaut, mais leur intérêt est surtout sémantique.</p><p><code>&lt;mark&gt;</code> signale un passage mis en évidence, <code>&lt;code&gt;</code> présente du code et <code>&lt;small&gt;</code> des annotations secondaires.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Mettre en valeur le texte",
+      "html": "<p><strong>Attention :</strong> sauvegarde ton travail régulièrement.</p>\n<p>Je <em>préfère</em> vérifier le résultat avant de publier.</p>\n<p>Raccourci : <code>Ctrl + S</code>.</p>\n<p><mark>Nouvelle information</mark> à lire.</p>",
+      "css": "",
+      "js": "",
+      "explanation": "Ces éléments décrivent la fonction du texte. Le CSS pourra ensuite modifier leur apparence sans perdre cette signification."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Marque « Important » comme information de forte importance et applique une emphase au mot « vraiment ».",
+      "initialCode": "<p>Important : lis les consignes.</p>\n<p>Je veux vraiment réussir.</p>",
+      "expectedResult": {
+        "tags": [
+          "strong",
+          "em"
+        ],
+        "text": [
+          "Important",
+          "vraiment"
+        ]
+      },
+      "hints": [
+        "Entoure Important avec <strong>.",
+        "Entoure vraiment avec <em>.",
+        "N’ajoute pas les balises autour de toute la phrase si seule une partie est visée."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quel élément indique une emphase dans une phrase ?",
+      "answers": [
+        "<em>",
+        "<div>",
+        "<br>",
+        "<img>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "em indique une emphase. strong exprime plutôt une importance forte."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "strong indique une importance forte.",
+        "em indique une emphase.",
+        "code sert à présenter un fragment de code.",
+        "La sémantique reste utile même si le style visuel change."
+      ]
+    }
+  ]
+}

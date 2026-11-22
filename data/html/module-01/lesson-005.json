@@ -1,0 +1,81 @@
+{
+  "id": "html-005",
+  "title": "Afficher des images accessibles",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Ajoute des images avec une alternative textuelle adaptée.",
+  "duration": 9,
+  "xp": 80,
+  "objectives": [
+    "Afficher une image avec img",
+    "Renseigner src et alt",
+    "Distinguer image informative et décorative"
+  ],
+  "prerequisites": [
+    "html-001"
+  ],
+  "tags": [
+    "images",
+    "alt",
+    "accessibilité"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>L’élément <code>&lt;img&gt;</code> intègre une image dans la page. L’attribut <code>src</code> indique son fichier et <code>alt</code> fournit une alternative textuelle.</p><p>Une image informative nécessite une description utile. Pour une image purement décorative, un attribut <code>alt=&quot;&quot;</code> permet aux technologies d’assistance de l’ignorer. N’utilise pas le nom du fichier comme description.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Afficher des images accessibles",
+      "html": "<figure>\n  <img src=\"images/velo-ville.jpg\" alt=\"Un vélo bleu stationné devant un café\" width=\"640\">\n  <figcaption>Un moyen simple de parcourir la ville.</figcaption>\n</figure>",
+      "css": "",
+      "js": "",
+      "explanation": "src localise le fichier, alt décrit l’information portée par l’image et width réserve une largeur de présentation. figure regroupe l’image et sa légende."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute un texte alternatif décrivant un chat roux endormi sur un coussin.",
+      "initialCode": "<img src=\"images/chat.jpg\">",
+      "expectedResult": {
+        "tags": [
+          "img"
+        ],
+        "attributes": {
+          "src": "images/chat.jpg",
+          "alt": "Un chat roux endormi sur un coussin"
+        }
+      },
+      "hints": [
+        "L’alternative s’écrit dans l’attribut alt.",
+        "Décris l’information utile plutôt que « image de ».",
+        "Garde la valeur src existante."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quel attribut fournit une alternative textuelle à une image ?",
+      "answers": [
+        "title",
+        "href",
+        "alt",
+        "poster"
+      ],
+      "correctAnswer": 2,
+      "explanation": "alt fournit un équivalent textuel lorsque l’image ne peut pas être vue ou chargée."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "img intègre une image.",
+        "src indique le fichier image.",
+        "alt transmet l’information utile de l’image.",
+        "Une image décorative peut utiliser alt vide."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "css-012",
+  "title": "Adapter une page avec les media queries",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Crée des styles conditionnels pour différentes largeurs d’écran.",
+  "duration": 12,
+  "xp": 105,
+  "objectives": [
+    "Écrire une media query",
+    "Concevoir une adaptation mobile",
+    "Choisir des points de rupture selon le contenu"
+  ],
+  "prerequisites": [
+    "css-006",
+    "css-009",
+    "css-010"
+  ],
+  "tags": [
+    "responsive",
+    "media-queries",
+    "mobile"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Une media query applique des règles lorsque certaines caractéristiques de l’environnement correspondent, par exemple la largeur du viewport. La syntaxe courante est <code>@media (max-width: 600px) { ... }</code>.</p><p>Une approche mobile-first consiste à écrire d’abord les styles adaptés aux petits écrans, puis à enrichir la mise en page à mesure que l’espace devient disponible. Les points de rupture doivent dépendre du contenu plutôt que d’un modèle d’appareil précis.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Adapter une page avec les media queries",
+      "html": "<div class=\"cartes\"><article>Carte A</article><article>Carte B</article><article>Carte C</article></div>",
+      "css": ".cartes { display: grid; grid-template-columns: 1fr; gap: 1rem; }\n@media (min-width: 700px) {\n  .cartes { grid-template-columns: repeat(3, 1fr); }\n}",
+      "js": "",
+      "explanation": "La grille reste sur une colonne par défaut et passe à trois colonnes lorsque le viewport atteint 700 pixels."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Dans la media query, réduis la taille du titre à 1.5rem.",
+      "initialCode": ".titre { font-size: 2rem; }\n@media (max-width: 600px) {\n  .titre {  }\n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".titre",
+            "property": "font-size",
+            "value": "1.5rem"
+          }
+        ]
+      },
+      "hints": [
+        "La règle se place à l’intérieur des accolades de @media.",
+        "La propriété est font-size.",
+        "Utilise l’unité rem."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Que fait une media query ?",
+      "answers": [
+        "Elle crée une image",
+        "Elle applique des styles selon des conditions",
+        "Elle définit une variable JavaScript",
+        "Elle remplace le HTML"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une media query permet d’appliquer des règles CSS selon la largeur, la préférence de mouvement ou d’autres caractéristiques prises en charge."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Une media query applique des règles sous condition.",
+        "max-width et min-width testent la largeur du viewport.",
+        "Mobile-first commence par les styles les plus contraints.",
+        "Le contenu doit guider les points de rupture."
+      ]
+    }
+  ]
+}

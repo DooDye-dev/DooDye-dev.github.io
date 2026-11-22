@@ -1,0 +1,83 @@
+{
+  "id": "html-004",
+  "title": "Créer des liens hypertextes",
+  "category": "html",
+  "level": "Débutant",
+  "description": "Relie des pages et des ressources avec l’élément a et ses attributs.",
+  "duration": 8,
+  "xp": 75,
+  "objectives": [
+    "Créer un lien avec href",
+    "Différencier une URL relative et absolue",
+    "Rédiger un intitulé de lien explicite"
+  ],
+  "prerequisites": [
+    "html-001"
+  ],
+  "tags": [
+    "liens",
+    "navigation",
+    "attributs"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>L’élément <code>&lt;a&gt;</code> crée un lien. Son attribut <code>href</code> contient la destination. Une URL absolue pointe vers une adresse complète ; une URL relative est résolue depuis l’emplacement du document courant.</p><p>Le texte du lien doit annoncer clairement sa destination. Pour ouvrir un lien dans un nouvel onglet, <code>target=&quot;_blank&quot;</code> est généralement accompagné de <code>rel=&quot;noopener noreferrer&quot;</code>.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Créer des liens hypertextes",
+      "html": "<nav>\n  <a href=\"index.html\">Accueil</a>\n  <a href=\"https://developer.mozilla.org/fr/\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation MDN</a>\n</nav>",
+      "css": "",
+      "js": "",
+      "explanation": "Le premier lien pointe vers un fichier du même site. Le second utilise une URL absolue et demande un nouvel onglet avec les précautions adaptées."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Transforme le texte « documentation » en lien vers https://developer.mozilla.org/fr/ avec un intitulé compréhensible.",
+      "initialCode": "<p>Pour apprendre, consulte la documentation.</p>",
+      "expectedResult": {
+        "tags": [
+          "a"
+        ],
+        "text": [
+          "documentation"
+        ],
+        "attributes": {
+          "href": "https://developer.mozilla.org/fr/"
+        }
+      },
+      "hints": [
+        "La balise <a> entoure le texte cliquable.",
+        "La destination se place dans href.",
+        "Un lien descriptif est préférable à « clique ici »."
+      ],
+      "exerciseType": "html",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quel attribut définit la destination d’un lien ?",
+      "answers": [
+        "src",
+        "href",
+        "alt",
+        "action"
+      ],
+      "correctAnswer": 1,
+      "explanation": "href contient l’URL ou le chemin vers lequel le lien doit naviguer."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "a crée un lien hypertexte.",
+        "href définit sa destination.",
+        "Un intitulé explicite améliore l’accessibilité.",
+        "rel sécurise notamment les liens ouverts dans un nouvel onglet."
+      ]
+    }
+  ]
+}

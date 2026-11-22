@@ -1,0 +1,81 @@
+{
+  "id": "html-011",
+  "title": "Valider les champs avec HTML",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Utilise les contraintes natives pour limiter les erreurs de saisie.",
+  "duration": 10,
+  "xp": 95,
+  "objectives": [
+    "Utiliser required et minlength",
+    "Valider email et nombre",
+    "Comprendre les limites de la validation côté navigateur"
+  ],
+  "prerequisites": [
+    "html-010"
+  ],
+  "tags": [
+    "validation",
+    "formulaires",
+    "attributs"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>HTML propose des contraintes de validation intégrées : <code>required</code>, <code>minlength</code>, <code>maxlength</code>, <code>min</code>, <code>max</code> et certains types comme <code>email</code>.</p><p>Ces contrôles améliorent l’expérience mais ne remplacent jamais une validation côté serveur : un utilisateur peut contourner les contrôles du navigateur.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Valider les champs avec HTML",
+      "html": "<form>\n  <label for=\"pseudo\">Pseudo</label>\n  <input id=\"pseudo\" name=\"pseudo\" minlength=\"3\" maxlength=\"16\" required>\n  <label for=\"age\">Âge</label>\n  <input id=\"age\" name=\"age\" type=\"number\" min=\"13\" max=\"120\" required>\n  <button>Valider</button>\n</form>",
+      "css": "",
+      "js": "",
+      "explanation": "Le navigateur vérifie les contraintes avant la soumission interactive. Les règles métiers et la sécurité doivent aussi être contrôlées sur le serveur."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Rends l’adresse e-mail obligatoire en ajoutant l’attribut required.",
+      "initialCode": "<input id=\"email\" name=\"email\" type=\"email\">",
+      "expectedResult": {
+        "tags": [
+          "input"
+        ],
+        "attributes": {
+          "type": "email",
+          "required": true
+        }
+      },
+      "hints": [
+        "required est un attribut booléen.",
+        "Ajoute-le dans la balise input.",
+        "Garde le type email pour la vérification de format native."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "La validation HTML suffit-elle à sécuriser les données reçues par un serveur ?",
+      "answers": [
+        "Oui, toujours",
+        "Non, le serveur doit aussi valider",
+        "Uniquement avec required",
+        "Uniquement sur mobile"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La validation côté client peut être contournée. Le serveur doit vérifier les données avant de les traiter."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "required rend un champ obligatoire.",
+        "minlength et maxlength encadrent la longueur du texte.",
+        "min et max encadrent les valeurs numériques ou dates.",
+        "La validation serveur reste indispensable."
+      ]
+    }
+  ]
+}

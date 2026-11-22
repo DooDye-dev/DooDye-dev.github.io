@@ -1,0 +1,82 @@
+{
+  "id": "html-017",
+  "title": "Intégrer une page externe avec iframe",
+  "category": "html",
+  "level": "Avancé",
+  "description": "Intègre un contenu externe en encadrant ses permissions et son accessibilité.",
+  "duration": 12,
+  "xp": 120,
+  "objectives": [
+    "Utiliser iframe et title",
+    "Limiter les permissions avec sandbox",
+    "Définir un chargement différé lorsque pertinent"
+  ],
+  "prerequisites": [
+    "html-004",
+    "html-014"
+  ],
+  "tags": [
+    "iframe",
+    "sécurité",
+    "intégration"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p><code>&lt;iframe&gt;</code> intègre un autre document dans la page. Fournis un attribut <code>title</code> qui décrit le contenu intégré. L’attribut <code>loading=&quot;lazy&quot;</code> peut différer le chargement d’un cadre situé plus bas dans la page.</p><p><code>sandbox</code> restreint certaines capacités du document embarqué. N’ajoute que les permissions nécessaires et vérifie les exigences du service intégré.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Intégrer une page externe avec iframe",
+      "html": "<iframe\n  src=\"https://example.com/guide\"\n  title=\"Guide de démonstration\"\n  loading=\"lazy\"\n  sandbox\n  width=\"600\"\n  height=\"400\">\n</iframe>",
+      "css": "",
+      "js": "",
+      "explanation": "title donne un nom accessible au cadre. sandbox active des restrictions par défaut ; les permissions éventuelles doivent être choisies après analyse."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute un titre accessible « Carte du quartier » et l’attribut sandbox.",
+      "initialCode": "<iframe src=\"https://example.com/carte\"></iframe>",
+      "expectedResult": {
+        "tags": [
+          "iframe"
+        ],
+        "attributes": {
+          "title": "Carte du quartier",
+          "sandbox": true
+        }
+      },
+      "hints": [
+        "title décrit le contenu de l’iframe.",
+        "sandbox est un attribut booléen.",
+        "Conserve l’URL src existante."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "À quoi sert principalement l’attribut sandbox d’une iframe ?",
+      "answers": [
+        "À agrandir le cadre",
+        "À restreindre certaines capacités du contenu intégré",
+        "À changer la langue du document",
+        "À ajouter une légende"
+      ],
+      "correctAnswer": 1,
+      "explanation": "sandbox applique des restrictions au document intégré. Des permissions supplémentaires ne doivent être accordées que si elles sont nécessaires."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "iframe intègre un autre document.",
+        "title décrit le contenu du cadre.",
+        "sandbox limite certaines capacités.",
+        "loading=lazy peut différer le chargement."
+      ]
+    }
+  ]
+}

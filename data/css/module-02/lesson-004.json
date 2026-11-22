@@ -1,0 +1,86 @@
+{
+  "id": "css-009",
+  "title": "Positionner les éléments",
+  "category": "css",
+  "level": "Intermédiaire",
+  "description": "Utilise static, relative, absolute, fixed et sticky à bon escient.",
+  "duration": 12,
+  "xp": 105,
+  "objectives": [
+    "Comprendre le contexte de positionnement",
+    "Différencier absolute et fixed",
+    "Créer un élément sticky"
+  ],
+  "prerequisites": [
+    "css-007"
+  ],
+  "tags": [
+    "position",
+    "z-index",
+    "layout"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>La valeur initiale de <code>position</code> est généralement static. relative conserve la place dans le flux tout en permettant un décalage. absolute retire l’élément du flux et le positionne par rapport à son ancêtre de positionnement le plus proche.</p><p>fixed positionne par rapport à la fenêtre. sticky se comporte comme un élément du flux puis reste accroché à un seuil pendant le défilement, dans les limites de son conteneur.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Positionner les éléments",
+      "html": "<div class=\"carte\">\n  <span class=\"badge\">Nouveau</span>\n  <h2>Produit</h2>\n  <p>Description du produit.</p>\n</div>",
+      "css": ".carte { position: relative; padding: 2rem; }\n.badge { position: absolute; top: .5rem; right: .5rem; }",
+      "js": "",
+      "explanation": "La carte crée le contexte de positionnement. Le badge absolute se place dans ce contexte sans réserver sa place dans le flux."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Crée un contexte de positionnement sur .parent et place .badge en absolute.",
+      "initialCode": ".parent { }\n.badge { position: static; }",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".parent",
+            "property": "position",
+            "value": "relative"
+          },
+          {
+            "selector": ".badge",
+            "property": "position",
+            "value": "absolute"
+          }
+        ]
+      },
+      "hints": [
+        "relative sur le parent crée le contexte de référence.",
+        "absolute retire le badge du flux normal.",
+        "Il faut deux règles distinctes."
+      ],
+      "exerciseType": "css",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Par rapport à quoi un élément position: fixed est-il généralement positionné ?",
+      "answers": [
+        "Son paragraphe précédent",
+        "La fenêtre du navigateur",
+        "Uniquement son parent direct",
+        "La largeur de son texte"
+      ],
+      "correctAnswer": 1,
+      "explanation": "fixed positionne l’élément par rapport au viewport, sauf cas particuliers liés à certains ancêtres transformés ou effets similaires."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "relative conserve la place dans le flux.",
+        "absolute est positionné par rapport à un ancêtre de référence.",
+        "fixed se rapporte généralement au viewport.",
+        "sticky combine flux normal et accrochage au défilement."
+      ]
+    }
+  ]
+}

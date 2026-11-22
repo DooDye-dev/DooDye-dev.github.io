@@ -1,0 +1,82 @@
+{
+  "id": "html-013",
+  "title": "Ajouter les métadonnées essentielles",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Configure le titre, l’encodage et l’affichage mobile d’une page.",
+  "duration": 8,
+  "xp": 85,
+  "objectives": [
+    "Renseigner le titre du document",
+    "Déclarer l’encodage UTF-8",
+    "Configurer la fenêtre d’affichage mobile"
+  ],
+  "prerequisites": [
+    "html-001"
+  ],
+  "tags": [
+    "head",
+    "métadonnées",
+    "responsive"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les métadonnées se placent dans <code>&lt;head&gt;</code>. Le titre avec <code>&lt;title&gt;</code> identifie la page dans l’onglet et les favoris. <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code> déclare l’encodage des caractères.</p><p>La balise viewport aide les pages à s’adapter à la largeur de l’écran mobile. Une description concise peut être déclarée avec <code>meta name=&quot;description&quot;</code>.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Ajouter les métadonnées essentielles",
+      "html": "<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"description\" content=\"Conseils simples pour débuter le jardinage en ville.\">\n  <title>Jardin urbain — Conseils pratiques</title>\n</head>",
+      "css": "",
+      "js": "",
+      "explanation": "Ces métadonnées améliorent l’encodage, l’affichage mobile et la présentation de la page dans certains moteurs de recherche."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute la métadonnée viewport avec width=device-width et initial-scale=1.",
+      "initialCode": "<head>\n  <meta charset=\"UTF-8\">\n  <title>Portfolio</title>\n</head>",
+      "expectedResult": {
+        "tags": [
+          "meta",
+          "title"
+        ],
+        "attributes": {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1"
+        }
+      },
+      "hints": [
+        "La métadonnée viewport utilise name=\"viewport\".",
+        "La valeur se place dans content.",
+        "Elle doit être dans head."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle métadonnée aide le navigateur à adapter la largeur de la page sur mobile ?",
+      "answers": [
+        "charset",
+        "viewport",
+        "author",
+        "refresh"
+      ],
+      "correctAnswer": 1,
+      "explanation": "viewport configure la fenêtre de mise en page, notamment avec width=device-width."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "title nomme la page.",
+        "UTF-8 couvre les caractères courants de nombreuses langues.",
+        "viewport aide à adapter la mise en page aux écrans.",
+        "description fournit un résumé de page."
+      ]
+    }
+  ]
+}

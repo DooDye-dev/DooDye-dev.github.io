@@ -1,0 +1,101 @@
+{
+  "id": "html-018",
+  "title": "Assembler une page de présentation",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Réunis les principales notions HTML dans une page de profil structurée.",
+  "duration": 18,
+  "xp": 130,
+  "objectives": [
+    "Organiser les régions principales",
+    "Ajouter un contenu structuré et un lien",
+    "Vérifier la cohérence sémantique"
+  ],
+  "prerequisites": [
+    "html-008",
+    "html-011",
+    "html-014",
+    "html-015"
+  ],
+  "tags": [
+    "projet",
+    "sémantique",
+    "portfolio"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Un petit projet permet de vérifier que les éléments HTML sont choisis selon leur fonction. Une page de présentation peut contenir un en-tête, une navigation, un contenu principal, des sections thématiques et un pied de page.</p><p>Avant d’ajouter du CSS, vérifie la structure, l’ordre des titres, les alternatives des images et le sens des liens. Le HTML doit rester compréhensible même sans mise en forme.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Assembler une page de présentation",
+      "html": "<header>\n  <h1>Camille Martin</h1>\n  <p>Photographe et exploratrice urbaine</p>\n</header>\n<main>\n  <section>\n    <h2>À propos</h2>\n    <p>Je raconte les villes à travers la photographie.</p>\n  </section>\n  <section>\n    <h2>Projets</h2>\n    <ul><li>Les marchés du matin</li><li>Façades colorées</li></ul>\n  </section>\n  <a href=\"mailto:camille@example.com\">Me contacter</a>\n</main>\n<footer><small>© 2026 Camille Martin</small></footer>",
+      "css": "",
+      "js": "",
+      "explanation": "Le projet combine des titres hiérarchisés, des sections thématiques, une liste et un lien de contact dans des régions sémantiques."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute une section « À propos » avec un paragraphe, puis un lien de contact dans main.",
+      "initialCode": "<header>\n  <h1>Mon nom</h1>\n</header>\n<main>\n  \n</main>\n<footer>\n</footer>",
+      "expectedResult": {
+        "tags": [
+          "header",
+          "main",
+          "footer",
+          "section",
+          "h2",
+          "p",
+          "a"
+        ],
+        "text": [
+          "À propos"
+        ]
+      },
+      "hints": [
+        "Une section thématique utilise section et un titre h2.",
+        "Place la section à l’intérieur de main.",
+        "Un lien de contact peut utiliser une URL mailto:."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quel contrôle faut-il faire avant de commencer la mise en forme CSS ?",
+      "answers": [
+        "Vérifier la structure et le sens des éléments",
+        "Remplacer tous les éléments par des div",
+        "Supprimer les titres",
+        "Ajouter des styles en ligne partout"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Une structure sémantique et cohérente constitue une base solide pour la mise en forme et l’accessibilité."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Une page se structure avec des régions sémantiques.",
+        "Les titres suivent une hiérarchie logique.",
+        "Les liens doivent annoncer leur destination.",
+        "Le HTML doit garder du sens sans CSS."
+      ]
+    },
+    {
+      "type": "challenge",
+      "title": "Défi : page de présentation",
+      "description": "Crée une page de profil qui présente une personne, ses projets et un moyen de contact.",
+      "requirements": [
+        "Utiliser des régions sémantiques",
+        "Créer une hiérarchie de titres cohérente",
+        "Présenter au moins deux projets dans une liste",
+        "Ajouter un lien de contact explicite"
+      ],
+      "xpReward": 100
+    }
+  ]
+}

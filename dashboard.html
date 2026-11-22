@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - WebCraft</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/dashboard.css">
+    <link rel="stylesheet" href="css/themes/light.css" id="theme-stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">WebCraft</span>
+            </a>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="lessons.html" class="nav-link">Leçons</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="dashboard.html" class="nav-link active">Tableau de bord</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-icon theme-toggle" id="theme-toggle">
+                    <span class="icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                <h1 class="page-title">Votre tableau de bord</h1>
+
+                <section class="user-stats">
+                    <h2 class="section-title">Vos statistiques</h2>
+                    <div class="stats-grid" id="user-stats">
+                        <!-- Les stats seront chargées dynamiquement par JavaScript -->
+                    </div>
+                </section>
+
+                <section class="progress-overview">
+                    <h2 class="section-title">Progression globale</h2>
+                    <div class="progress-bar-container">
+                        <div class="progress-label" id="global-progress-label">0/0 leçons</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="global-progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="course-progress">
+                    <h2 class="section-title">Progression par module</h2>
+                    <div class="courses-list" id="courses-list">
+                        <!-- Les cours seront chargés dynamiquement -->
+                    </div>
+                </section>
+
+                <section class="recent-activity">
+                    <h2 class="section-title">Activité récente</h2>
+                    <div class="activity-list" id="activity-list">
+                        <!-- L'activité sera chargée dynamiquement -->
+                    </div>
+                </section>
+
+                <section class="badges-section">
+                    <h2 class="section-title">Vos badges</h2>
+                    <div class="badges-grid" id="badges-grid">
+                        <!-- Les badges seront chargés dynamiquement -->
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>WebCraft © 2024 - Une plateforme éducative</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/models/UserProgress.js"></script>
+    <script src="js/data/loader.js"></script>
+    <script>
+        // Charger les données et initialiser le dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            const userProgress = new UserProgress();
+            const coursesData = loader.loadCourses();
+
+            // Initialiser le dashboard avec les données
+            // (Le code complet serait dans js/views/DashboardView.js)
+        });
+    </script>
+</body>
+</html>

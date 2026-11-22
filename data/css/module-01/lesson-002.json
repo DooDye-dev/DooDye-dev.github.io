@@ -1,0 +1,80 @@
+{
+  "id": "css-002",
+  "title": "Cibler des éléments avec les sélecteurs",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Utilise les sélecteurs de type, de classe et d’identifiant.",
+  "duration": 9,
+  "xp": 80,
+  "objectives": [
+    "Sélectionner un élément par son nom",
+    "Réutiliser une classe",
+    "Comprendre l’identifiant unique"
+  ],
+  "prerequisites": [
+    "css-001"
+  ],
+  "tags": [
+    "sélecteurs",
+    "class",
+    "id"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Un sélecteur de type cible un élément, par exemple <code>p</code>. Un sélecteur de classe commence par un point, comme <code>.carte</code>, et peut être réutilisé. Un sélecteur d’identifiant commence par <code>#</code> et cible l’élément portant cet id.</p><p>Privilégie les classes pour les styles réutilisables. Les identifiants servent surtout à identifier une cible unique dans le document et ont une spécificité plus élevée.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Cibler des éléments avec les sélecteurs",
+      "html": "<article class=\"carte\" id=\"presentation\">\n  <h2>Atelier créatif</h2>\n  <p class=\"intro\">Un espace pour apprendre.</p>\n</article>",
+      "css": "p { line-height: 1.5; }\n.carte { padding: 1rem; }\n#presentation { border: 1px solid #ccc; }\n.intro { color: #555; }",
+      "js": "",
+      "explanation": "p cible tous les paragraphes, .carte cible les éléments de cette classe et #presentation cible l’élément ayant cet identifiant."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Complète le sélecteur pour cibler la classe important et mettre le texte en rouge foncé (crimson).",
+      "initialCode": "<p class=\"important\">À lire</p>\n<style>\n. { color: crimson; }\n</style>",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".important",
+            "property": "color",
+            "value": "crimson"
+          }
+        ]
+      },
+      "hints": [
+        "Un sélecteur de classe commence par un point.",
+        "Le nom de classe est important.",
+        "La propriété est color."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quel sélecteur cible tous les éléments ayant class=\"bouton\" ?",
+      "answers": [
+        "#bouton",
+        "bouton",
+        ".bouton",
+        "*bouton"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le point précède le nom d’une classe dans un sélecteur CSS."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "Un sélecteur de type cible un nom d’élément.",
+        ".classe cible une classe réutilisable.",
+        "#identifiant cible un id."
+      ]
+    }
+  ]
+}

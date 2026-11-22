@@ -1,0 +1,81 @@
+{
+  "id": "css-014",
+  "title": "Créer des arrière-plans",
+  "category": "css",
+  "level": "Débutant",
+  "description": "Configure des couleurs, images, positions et tailles d’arrière-plan.",
+  "duration": 10,
+  "xp": 85,
+  "objectives": [
+    "Définir background-color",
+    "Positionner et dimensionner une image",
+    "Comprendre cover et contain"
+  ],
+  "prerequisites": [
+    "css-003"
+  ],
+  "tags": [
+    "background",
+    "images",
+    "déco"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p>Les propriétés d’arrière-plan contrôlent la décoration de la boîte. <code>background-color</code> définit une couleur, <code>background-image</code> une ou plusieurs images, <code>background-position</code> leur position et <code>background-size</code> leur dimension.</p><p><code>cover</code> remplit la boîte en conservant les proportions, quitte à recadrer. <code>contain</code> affiche l’image entière, quitte à laisser de l’espace libre.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Créer des arrière-plans",
+      "html": "<section class=\"hero\"><h1>Explorer la nature</h1></section>",
+      "css": ".hero {\n  min-height: 20rem;\n  color: white;\n  background-image: url(\"images/foret.jpg\");\n  background-position: center;\n  background-size: cover;\n}",
+      "js": "",
+      "explanation": "L’image couvre toute la zone et reste centrée. Une hauteur minimale donne un espace suffisant au titre."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Configure l’image pour couvrir toute la boîte, quitte à être recadrée.",
+      "initialCode": ".hero {\n  background-image: url(\"images/foret.jpg\");\n  background-size: ;\n}",
+      "expectedResult": {
+        "cssProperties": [
+          {
+            "selector": ".hero",
+            "property": "background-size",
+            "value": "cover"
+          }
+        ]
+      },
+      "hints": [
+        "La valeur recherchée est un mot-clé CSS.",
+        "cover remplit la boîte.",
+        "La propriété est background-size."
+      ],
+      "exerciseType": "css",
+      "xpReward": 40
+    },
+    {
+      "type": "quiz",
+      "question": "Quelle valeur remplit toute la boîte en conservant les proportions de l’image quitte à la recadrer ?",
+      "answers": [
+        "contain",
+        "cover",
+        "repeat",
+        "auto-fit"
+      ],
+      "correctAnswer": 1,
+      "explanation": "cover remplit la boîte avec une image proportionnelle ; une partie peut être recadrée."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "background-color définit la couleur de fond.",
+        "background-image ajoute une image de fond.",
+        "cover remplit la zone et peut recadrer.",
+        "contain montre l’image entière."
+      ]
+    }
+  ]
+}

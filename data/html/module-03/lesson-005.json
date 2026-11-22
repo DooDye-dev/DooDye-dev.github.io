@@ -1,0 +1,82 @@
+{
+  "id": "html-015",
+  "title": "Créer des contenus dépliables",
+  "category": "html",
+  "level": "Intermédiaire",
+  "description": "Ajoute une zone de détails native avec summary et details.",
+  "duration": 7,
+  "xp": 80,
+  "objectives": [
+    "Utiliser details et summary",
+    "Créer un intitulé explicite",
+    "Comprendre le comportement natif d’ouverture"
+  ],
+  "prerequisites": [
+    "html-008"
+  ],
+  "tags": [
+    "details",
+    "interaction",
+    "contenu"
+  ],
+  "sections": [
+    {
+      "type": "explanation",
+      "title": "À comprendre",
+      "content": "<p><code>&lt;details&gt;</code> crée une zone que l’utilisateur peut ouvrir ou fermer. Son premier enfant <code>&lt;summary&gt;</code> fournit l’intitulé interactif.</p><p>L’attribut booléen <code>open</code> affiche le contenu dès le chargement. Cette solution convient aux FAQ ou aux informations complémentaires, sans devoir écrire du JavaScript pour le comportement de base.</p>"
+    },
+    {
+      "type": "code_example",
+      "title": "Créer des contenus dépliables",
+      "html": "<details>\n  <summary>Quels navigateurs sont compatibles ?</summary>\n  <p>Les navigateurs modernes prennent en charge cet élément.</p>\n</details>",
+      "css": "",
+      "js": "",
+      "explanation": "Le navigateur fournit le contrôle d’ouverture et de fermeture. summary doit annoncer clairement le contenu masqué."
+    },
+    {
+      "type": "interactive_exercise",
+      "title": "À toi de jouer !",
+      "instruction": "Ajoute un summary intitulé « Quand commence le cours ? » avant le paragraphe.",
+      "initialCode": "<details>\n  <p>Le cours commence lundi.</p>\n</details>",
+      "expectedResult": {
+        "tags": [
+          "details",
+          "summary",
+          "p"
+        ],
+        "text": [
+          "Quand commence le cours ?",
+          "Le cours commence lundi."
+        ]
+      },
+      "hints": [
+        "summary doit être le premier enfant de details.",
+        "Le texte du summary annonce le contenu.",
+        "Garde le paragraphe à l’intérieur de details."
+      ],
+      "exerciseType": "html",
+      "xpReward": 50
+    },
+    {
+      "type": "quiz",
+      "question": "Quel élément fournit le libellé visible d’une zone details ?",
+      "answers": [
+        "<caption>",
+        "<summary>",
+        "<legend>",
+        "<label>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "summary est l’intitulé du contrôle natif associé à details."
+    },
+    {
+      "type": "summary",
+      "title": "À retenir",
+      "keyPoints": [
+        "details crée une zone dépliable.",
+        "summary en fournit l’intitulé.",
+        "open affiche initialement le contenu."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets - WebCraft">
+    <title>Projets - WebCraft</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="brand-name">WebCraft</span>
+            </a>
+            <nav class="navbar-nav">
+                <a href="index.html" class="nav-link">
+                    <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    Accueil
+                </a>
+                <a href="lessons.html" class="nav-link">
+                    <svg viewBox="0 0 24 24"><path d="M12 2v20M17 21H9"/></svg>
+                    Apprendre
+                </a>
+                <a href="projects.html" class="nav-link active">
+                    <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg>
+                    Projets
+                </a>
+                <a href="dashboard.html" class="nav-link">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Tableau de bord
+                </a>
+            </nav>
+            <div class="navbar-actions">
+                <button class="btn btn-icon theme-toggle" aria-label="Changer de thème">
+                    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="btn btn-icon mobile-menu-btn" aria-label="Menu">
+                    <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="projects-page">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h1>🚀 Projets</h1>
+                <p>Mets en pratique tes connaissances en créant des projets concrets.</p>
+                <div class="projects-filters">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="beginner">Débutant</button>
+                    <button class="filter-btn" data-filter="intermediate">Intermédiaire</button>
+                    <button class="filter-btn" data-filter="advanced">Avancé</button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <div class="loading-placeholder">
+                    <div class="spinner"></div>
+                    <p>Chargement des projets...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">WebCraft</h3>
+                <p class="footer-description">Apprends HTML et CSS de manière interactive et ludique.</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="lessons.html">Cours</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="dashboard.html">Tableau de bord</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Légales</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="LICENSE">Licence MIT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WebCraft. Tous droits réservés.</p>
+            <p>Créé avec ❤️ par DooDye-dev</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/data/loader.js"></script>
+    <script src="js/models/UserProgress.js"></script>
+    <script src="js/views/ProjectsView.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                const projectsData = await fetch('data/projects.json').then(res => {
+                    if (!res.ok) return [];
+                    return res.json();
+                });
+
+                const userProgress = new UserProgress();
+                await userProgress.load();
+
+                const projectsView = new ProjectsView(projectsData, userProgress);
+                projectsView.render();
+
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        projectsView.filter(btn.dataset.filter);
+                    });
+                });
+
+            } catch (error) {
+                console.error('Erreur lors du chargement des projets:', error);
+                document.getElementById('projects-grid').innerHTML =
+                    '<p class="error">Erreur de chargement. Veuillez rafraîchir la page.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
